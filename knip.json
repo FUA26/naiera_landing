@@ -1,0 +1,22 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["app/**/*.{ts,tsx}", "lib/**/*.{ts,tsx}"],
+  "project": ["**/*.{ts,tsx}"],
+  "ignore": [
+    "**/*.config.{js,ts,mjs}",
+    "**/*.d.ts",
+    ".next/**",
+    "node_modules/**"
+  ],
+  "ignoreDependencies": [
+    "@types/*",
+    "tw-animate-css",
+    "class-variance-authority",
+    "lucide-react",
+    "eslint-config-next",
+    "eslint-config-prettier",
+    "eslint-plugin-tailwindcss",
+    "lint-staged",
+    "tailwindcss"
+  ]
+}
