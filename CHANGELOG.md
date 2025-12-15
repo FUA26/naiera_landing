@@ -67,29 +67,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `components/ui/button.tsx` - Button component
 - `components/ui/button.stories.tsx` - Button stories
 
-
-## [0.3.0] - 2025-12-12
+## [0.3.0] - 2025-12-15
 
 ### Added
 
 #### Core Architecture & Type Safety
-- ✅ Implemented T3 Env for type-safe environment variables with Zod validation
-- ✅ Setup next-intl for internationalization (English & Indonesian)
-- ✅ Created middleware for automatic locale detection and routing
-- ✅ Added translation files for landing page content
-- ✅ Integrated env validation in Next.js config
+
+- ✅ Integrated T3 Env (`@t3-oss/env-nextjs`) for type-safe environment variables
+- ✅ Added Zod for runtime environment variable validation
+- ✅ Created `env.ts` with comprehensive environment schema
+- ✅ Configured build-time validation (app refuses to build with invalid env vars)
+- ✅ Updated `.env.example` with detailed documentation
+- ✅ Implemented typed environment variable usage in `app/layout.tsx`
 
 ### Configuration Files Added
-- `src/env.ts` - T3 Env schema and validation
-- `src/i18n/request.ts` - i18n request configuration
-- `src/middleware.ts` - Locale routing middleware
-- `messages/en.json` - English translations
-- `messages/id.json` - Indonesian translations
 
-### Scripts/Features Added
-- Environment variable validation on build/dev
-- Automatic locale routing (`/en/...`, `/id/...`)
-- Type-safe environment variable access
+- `env.ts` - Type-safe environment variable schema and validation
+- `.env` - Local environment variables (gitignored)
+
+### Changed
+
+- Updated `next.config.ts` to import and validate environment variables
+- Updated `app/layout.tsx` to use typed environment variables
+- Enhanced `.env.example` with validation requirements and examples
 
 ## [Unreleased]
 

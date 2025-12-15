@@ -6,11 +6,11 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+          <div className="bg-primary text-primary-foreground flex h-9 w-9 items-center justify-center rounded-lg">
             <Code2 className="h-5 w-5" />
           </div>
           <span className="hidden font-bold sm:inline-block">
@@ -22,19 +22,19 @@ export function Header() {
         <div className="hidden items-center gap-6 md:flex">
           <Link
             href="/docs"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
           >
             Documentation
           </Link>
           <Link
             href="/components"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
           >
             Components
           </Link>
           <Link
             href="/examples"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
           >
             Examples
           </Link>
@@ -57,8 +57,12 @@ export function Header() {
 
           <ThemeToggle />
 
+          <Button size="sm" variant="ghost" className="hidden sm:flex" asChild>
+            <Link href="/auth/login">Login</Link>
+          </Button>
+
           <Button size="sm" className="hidden sm:flex" asChild>
-            <Link href="/docs">Get Started</Link>
+            <Link href="/auth/register">Sign Up</Link>
           </Button>
         </div>
       </nav>

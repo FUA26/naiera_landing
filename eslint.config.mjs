@@ -30,6 +30,13 @@ const eslintConfig = [
     },
   },
   {
+    files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+    rules: {
+      "storybook/no-uninstalled-addons": "off",
+      "storybook/csf-component": "off",
+    },
+  },
+  {
     ignores: [
       "node_modules/**",
       ".next/**",

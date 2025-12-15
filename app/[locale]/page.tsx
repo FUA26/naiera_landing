@@ -13,6 +13,7 @@ import {
   TestTube2,
   FileCode2,
   Sparkles,
+  User,
 } from "lucide-react";
 
 const features = [
@@ -37,7 +38,14 @@ const features = [
   {
     icon: Shield,
     title: "Type-Safe Environment",
-    description: "Runtime validation with T3 Env and Zod for bulletproof configs.",
+    description:
+      "Runtime validation with T3 Env and Zod for bulletproof configs.",
+  },
+  {
+    icon: User,
+    title: "Authentication Pages",
+    description:
+      "Ready-to-use login and register pages with password strength indicator and social login.",
   },
   {
     icon: Globe,
@@ -82,115 +90,134 @@ export default function HomePage() {
     <>
       <Banner />
       <Header />
-      <div className="relative min-h-screen overflow-hidden bg-background">
-      {/* Grid Pattern Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="bg-background relative min-h-screen overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-      {/* Gradient Orbs */}
-      <div className="absolute left-1/2 top-0 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-gradient-to-br from-primary/20 via-primary/5 to-transparent blur-3xl" />
-      <div className="absolute right-0 top-1/3 -z-10 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-accent/20 via-accent/5 to-transparent blur-3xl" />
+        {/* Gradient Orbs */}
+        <div className="from-primary/20 via-primary/5 absolute top-0 left-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-gradient-to-br to-transparent blur-3xl" />
+        <div className="from-accent/20 via-accent/5 absolute top-1/3 right-0 -z-10 h-[400px] w-[400px] rounded-full bg-gradient-to-br to-transparent blur-3xl" />
 
-      {/* Main Content */}
-      <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        {/* Hero Section */}
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-muted-foreground">Version 0.2.0</span>
-          </div>
+        {/* Main Content */}
+        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+          {/* Hero Section */}
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="border-border bg-muted/50 mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm">
+              <Sparkles className="text-primary h-4 w-4" />
+              <span className="text-muted-foreground">Version 0.3.0</span>
+            </div>
 
-          <h1 className="bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl">
-            Next.js Boilerplate
-          </h1>
+            <h1 className="from-foreground to-foreground/60 bg-gradient-to-br bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl">
+              Next.js Boilerplate
+            </h1>
 
-          <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl">
-            A production-ready, enterprise-grade Next.js starter with
-            TypeScript, Tailwind CSS, and comprehensive developer tooling.
-            Ship faster with confidence.
-          </p>
-
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/docs">Get Started</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link
-                href="https://github.com/yourusername/boilerplate"
-                target="_blank"
-              >
-                View on GitHub
-              </Link>
-            </Button>
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="mx-auto mt-32 max-w-6xl">
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Everything you need to build fast
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Carefully crafted with best practices and modern tooling
+            <p className="text-muted-foreground mt-6 text-lg leading-8 sm:text-xl">
+              A production-ready, enterprise-grade Next.js starter with
+              TypeScript, Tailwind CSS, and comprehensive developer tooling.
+              Ship faster with confidence.
             </p>
-          </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
-              >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-
-                <h3 className="mb-2 text-lg font-semibold">
-                  {feature.title}
-                </h3>
-
-                <p className="text-sm text-muted-foreground">
-                  {feature.description}
-                </p>
-
-                {/* Hover Gradient */}
-                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="mx-auto mt-32 max-w-3xl text-center">
-          <div className="rounded-3xl border border-border bg-card p-12 shadow-xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Ready to build?
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Clone the repository and start building your next project with
-              confidence.
-            </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild>
-                <Link href="/docs">Read Documentation</Link>
+                <Link href="/auth/register">Get Started Free</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/auth/login">Sign In</Link>
               </Button>
               <Button size="lg" variant="ghost" asChild>
-                <Link href="/storybook">View Components</Link>
+                <Link
+                  href="https://github.com/yourusername/boilerplate"
+                  target="_blank"
+                >
+                  View on GitHub
+                </Link>
               </Button>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="text-muted-foreground mt-12 flex flex-wrap items-center justify-center gap-8 text-sm">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>Authentication Ready</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>Type-Safe Environment</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>Dark Mode Support</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="mx-auto mt-32 max-w-6xl">
+            <div className="mb-16 text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Everything you need to build fast
+              </h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Carefully crafted with best practices and modern tooling
+              </p>
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="group border-border bg-card hover:border-primary/50 hover:shadow-primary/5 relative overflow-hidden rounded-2xl border p-6 transition-all hover:shadow-lg"
+                >
+                  <div className="bg-primary/10 text-primary group-hover:bg-primary/20 mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
+                    <feature.icon className="h-6 w-6" />
+                  </div>
+
+                  <h3 className="mb-2 text-lg font-semibold">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm">
+                    {feature.description}
+                  </p>
+
+                  {/* Hover Gradient */}
+                  <div className="from-primary/5 absolute inset-0 -z-10 bg-gradient-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mx-auto mt-32 max-w-3xl text-center">
+            <div className="border-border bg-card rounded-3xl border p-12 shadow-xl">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Ready to build?
+              </h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Clone the repository and start building your next project with
+                confidence.
+              </p>
+              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button size="lg" asChild>
+                  <Link href="/docs">Read Documentation</Link>
+                </Button>
+                <Button size="lg" variant="ghost" asChild>
+                  <Link href="/storybook">View Components</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <footer className="relative mt-32 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-          <p className="text-center text-sm text-muted-foreground">
-            Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
-          </p>
-        </div>
-      </footer>
-    </div>
+        {/* Footer */}
+        <footer className="border-border relative mt-32 border-t">
+          <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <p className="text-muted-foreground text-center text-sm">
+              Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+            </p>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }

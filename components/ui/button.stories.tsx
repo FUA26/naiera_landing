@@ -92,3 +92,22 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const AsChild: Story = {
+  args: {
+    asChild: true,
+    children: (
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        GitHub Link
+      </a>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "When asChild is true, the Button component will render its child element instead of a button, while applying button styles. This is useful for creating link buttons or other custom elements.",
+      },
+    },
+  },
+};
