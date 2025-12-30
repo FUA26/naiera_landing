@@ -24,7 +24,7 @@ import {
   IconDotsVertical,
 } from "@tabler/icons-react";
 import { Task } from "./data/schema";
-import { DataTableColumnHeader } from "./data-table-column-header";
+import { DataTableColumnHeader } from "@/components/data-table";
 
 // Status icon mapping
 const statusIcons: Record<Task["status"], React.ReactNode> = {

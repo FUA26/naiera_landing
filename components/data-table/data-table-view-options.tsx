@@ -1,7 +1,7 @@
 "use client";
 
 import { Table } from "@tanstack/react-table";
-import { IconEye, IconCheck, IconSearch } from "@tabler/icons-react";
+import { IconEye, IconCheck } from "@tabler/icons-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";

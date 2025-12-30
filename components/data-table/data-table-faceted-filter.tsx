@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Column } from "@tanstack/react-table";
-import { IconCheck, IconPlus, IconSearch } from "@tabler/icons-react";
+import { IconCheck, IconPlus } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -23,14 +23,16 @@ import {
 } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
 
+export interface FacetedFilterOption {
+  label: string;
+  value: string;
+  icon?: React.ComponentType<{ className?: string }>;
+}
+
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>;
   title?: string;
-  options: {
-    label: string;
-    value: string;
-    icon?: React.ComponentType<{ className?: string }>;
-  }[];
+  options: FacetedFilterOption[];
 }
 
 export function DataTableFacetedFilter<TData, TValue>({

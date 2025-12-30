@@ -5,7 +5,6 @@ import {
   IconSearch,
   IconArrowsSort,
   IconLayoutRows,
-  IconEye,
   IconDownload,
   IconX,
   IconCircle,
@@ -41,12 +40,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 
-import { DataTableFacetedFilter } from "./data-table-faceted-filter";
-import { DataTableDateFilter } from "./data-table-date-filter";
-import { DataTableViewOptions } from "./data-table-view-options";
+import {
+  DataTableFacetedFilter,
+  DataTableDateFilter,
+  DataTableViewOptions,
+  DensityState,
+  FacetedFilterOption,
+} from "@/components/data-table";
+import { Task } from "./data/schema";
 
 // Status options
-const statusOptions = [
+const statusOptions: FacetedFilterOption[] = [
   { value: "todo", label: "Todo", icon: IconCircle },
   { value: "in-progress", label: "In Progress", icon: IconLoader },
   { value: "done", label: "Done", icon: IconCircleCheck },
@@ -54,7 +58,7 @@ const statusOptions = [
 ];
 
 // Priority options
-const priorityOptions = [
+const priorityOptions: FacetedFilterOption[] = [
   { value: "low", label: "Low", icon: IconArrowDown },
   { value: "medium", label: "Medium", icon: IconArrowRight },
   { value: "high", label: "High", icon: IconArrowUp },
@@ -69,25 +73,23 @@ const sortableColumns = [
   { value: "createdAt", label: "Created At" },
 ];
 
-export type DensityState = "short" | "medium" | "tall" | "extra-tall";
-
 interface SortItem {
   id: string;
   column: string;
   desc: boolean;
 }
 
-interface DataTableToolbarProps<TData> {
-  table: Table<TData>;
+interface TasksToolbarProps {
+  table: Table<Task>;
   density: DensityState;
   onDensityChange: (density: DensityState) => void;
 }
 
-export function DataTableToolbar<TData>({
+export function TasksToolbar({
   table,
   density,
   onDensityChange,
-}: DataTableToolbarProps<TData>) {
+}: TasksToolbarProps) {
   const isFiltered = table.getState().columnFilters.length > 0;
   const sortingState = table.getState().sorting;
   const sortCount = sortingState.length;

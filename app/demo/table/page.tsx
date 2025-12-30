@@ -1,6 +1,16 @@
+"use client";
+
+import {
+  DataTable,
+  DataTableActionBar,
+  DensityState,
+} from "@/components/data-table";
 import { columns } from "./columns";
-import { DataTable } from "./data-table";
 import { tasks } from "./data/tasks";
+import { TasksToolbar } from "./tasks-toolbar";
+import { TasksActionBarContent } from "./tasks-action-bar";
+import { Task } from "./data/schema";
+import { Table } from "@tanstack/react-table";
 
 export default function TasksPage() {
   return (
@@ -11,7 +21,27 @@ export default function TasksPage() {
           Manage your tasks with advanced filtering, sorting, and bulk actions.
         </p>
       </div>
-      <DataTable columns={columns} data={tasks} />
+      <DataTable
+        columns={columns}
+        data={tasks}
+        toolbar={(table, density, onDensityChange) => (
+          <TasksToolbar
+            table={table as Table<Task>}
+            density={density}
+            onDensityChange={onDensityChange}
+          />
+        )}
+        actionBar={(table) => (
+          <DataTableActionBar table={table}>
+            {(selectedRows, resetSelection) => (
+              <TasksActionBarContent
+                selectedRows={selectedRows as Task[]}
+                resetSelection={resetSelection}
+              />
+            )}
+          </DataTableActionBar>
+        )}
+      />
     </div>
   );
 }

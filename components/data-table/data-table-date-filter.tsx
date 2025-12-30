@@ -3,11 +3,7 @@
 import * as React from "react";
 import { Column } from "@tanstack/react-table";
 import { format } from "date-fns";
-import {
-  IconCalendar,
-  IconChevronLeft,
-  IconChevronRight,
-} from "@tabler/icons-react";
+import { IconCalendar } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";

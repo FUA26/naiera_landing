@@ -14,6 +14,7 @@ import {
   VisibilityState,
   getFacetedRowModel,
   getFacetedUniqueValues,
+  Table as TanStackTable,
 } from "@tanstack/react-table";
 
 import {
@@ -27,13 +28,9 @@ import {
 import { cn } from "@/lib/utils";
 
 import { DataTablePagination } from "./data-table-pagination";
-import { DataTableToolbar, DensityState } from "./data-table-toolbar";
-import { DataTableActionBar } from "./data-table-action-bar";
 
-interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[];
-  data: TData[];
-}
+// Density types
+export type DensityState = "short" | "medium" | "tall" | "extra-tall";
 
 // Density height mapping
 const densityHeights: Record<DensityState, string> = {
@@ -43,9 +40,28 @@ const densityHeights: Record<DensityState, string> = {
   "extra-tall": "h-20",
 };
 
+interface DataTableProps<TData, TValue> {
+  columns: ColumnDef<TData, TValue>[];
+  data: TData[];
+  toolbar?: (
+    table: TanStackTable<TData>,
+    density: DensityState,
+    onDensityChange: (d: DensityState) => void
+  ) => React.ReactNode;
+  actionBar?: (table: TanStackTable<TData>) => React.ReactNode;
+  enableRowSelection?: boolean;
+  enablePagination?: boolean;
+  defaultDensity?: DensityState;
+}
+
 export function DataTable<TData, TValue>({
   columns,
   data,
+  toolbar,
+  actionBar,
+  enableRowSelection = true,
+  enablePagination = true,
+  defaultDensity = "medium",
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -54,37 +70,35 @@ export function DataTable<TData, TValue>({
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
-  const [density, setDensity] = React.useState<DensityState>("medium");
+  const [density, setDensity] = React.useState<DensityState>(defaultDensity);
 
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
+    getPaginationRowModel: enablePagination
+      ? getPaginationRowModel()
+      : undefined,
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
-    onRowSelectionChange: setRowSelection,
+    onRowSelectionChange: enableRowSelection ? setRowSelection : undefined,
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     state: {
       sorting,
       columnFilters,
       columnVisibility,
-      rowSelection,
+      rowSelection: enableRowSelection ? rowSelection : {},
     },
   });
 
   return (
     <div className="w-full space-y-4">
       {/* Toolbar */}
-      <DataTableToolbar
-        table={table}
-        density={density}
-        onDensityChange={setDensity}
-      />
+      {toolbar && toolbar(table, density, setDensity)}
 
       {/* Table */}
       <div className="rounded-md border">
@@ -140,10 +154,13 @@ export function DataTable<TData, TValue>({
       </div>
 
       {/* Pagination */}
-      <DataTablePagination table={table} />
+      {enablePagination && <DataTablePagination table={table} />}
 
-      {/* Bulk Action Bar (floating) */}
-      <DataTableActionBar table={table} />
+      {/* Action Bar (floating) */}
+      {actionBar && actionBar(table)}
     </div>
   );
 }
+
+// Re-export types for external use
+export type { TanStackTable as DataTableInstance };
