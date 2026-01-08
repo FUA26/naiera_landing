@@ -364,5 +364,26 @@
       "sitemap": "Sitemap"
     },
     "version": "Developed with ❤️ for the people of Naiera Regency"
+  },
+  "Accessibility": {
+    "title": "Accessibility Tools",
+    "speech": "Activate Web Speech",
+    "textSize": "Set Text Size",
+    "lineHeight": "Set Line Height",
+    "letterSpacing": "Letter Spacing",
+    "spacing": {
+      "small": "Small",
+      "normal": "Medium",
+      "large": "Large"
+    },
+    "textAlign": "Text Align",
+    "readableFont": "Readable Font",
+    "linksUnderline": "Links Underline",
+    "monochrome": "Monochrome Mode",
+    "highContrast": "High Contrast Mode",
+    "zoomCursor": "Zoom in Cursor",
+    "stopAnimation": "Stop Animation",
+    "hideImages": "Hide Image",
+    "reset": "Reset Settings"
   }
 }

@@ -157,3 +157,95 @@
     scroll-behavior: smooth;
   }
 }
+
+/* ========================================
+   ACCESSIBILITY UTILITIES
+   ======================================== */
+
+:root {
+  --a11y-font-scale: 1;
+  --a11y-line-height: 1.5;
+  --a11y-letter-spacing: 0;
+}
+
+/* Text Size Scaling */
+html.a11y-text-scale {
+  font-size: calc(16px * var(--a11y-font-scale)) !important;
+}
+
+/* Line Height Scaling */
+body.a11y-line-height * {
+  line-height: var(--a11y-line-height) !important;
+}
+
+/* Letter Spacing */
+body.a11y-letter-spacing * {
+  letter-spacing: var(--a11y-letter-spacing) !important;
+}
+
+/* Readable Font */
+body.a11y-readable-font,
+body.a11y-readable-font * {
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif !important;
+}
+
+/* Links Underline */
+body.a11y-links-underline a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+/* Monochrome Mode */
+body.a11y-monochrome {
+  filter: grayscale(100%) !important;
+}
+
+/* High Contrast Mode */
+body.a11y-high-contrast {
+  filter: contrast(1.5) !important;
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+}
+body.a11y-high-contrast * {
+  border-color: currentColor !important;
+}
+
+/* Zoom Cursor */
+body.a11y-zoom-cursor,
+body.a11y-zoom-cursor * {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 8v8M8 12h8'/%3E%3C/svg%3E")
+      24 24,
+    auto !important;
+}
+
+/* Stop Animations */
+body.a11y-stop-animation *,
+body.a11y-stop-animation *::before,
+body.a11y-stop-animation *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Hide Images */
+body.a11y-hide-images img,
+body.a11y-hide-images picture,
+body.a11y-hide-images video,
+body.a11y-hide-images svg:not(.a11y-icon),
+body.a11y-hide-images [style*="background-image"] {
+  opacity: 0.1 !important;
+}
+
+/* Text Align Classes */
+body.a11y-align-left * {
+  text-align: left !important;
+}
+body.a11y-align-center * {
+  text-align: center !important;
+}
+body.a11y-align-right * {
+  text-align: right !important;
+}
+body.a11y-align-justify * {
+  text-align: justify !important;
+}

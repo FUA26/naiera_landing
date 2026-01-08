@@ -370,5 +370,26 @@
       "sitemap": "Sitemap"
     },
     "version": "Dikembangkan dengan ❤️ untuk warga Kabupaten Naiera"
+  },
+  "Accessibility": {
+    "title": "Alat Aksesibilitas",
+    "speech": "Aktifkan Web Speech",
+    "textSize": "Ukuran Teks",
+    "lineHeight": "Tinggi Baris",
+    "letterSpacing": "Jarak Huruf",
+    "spacing": {
+      "small": "Kecil",
+      "normal": "Sedang",
+      "large": "Besar"
+    },
+    "textAlign": "Rata Teks",
+    "readableFont": "Font Mudah Dibaca",
+    "linksUnderline": "Garis Bawah Tautan",
+    "monochrome": "Mode Monokrom",
+    "highContrast": "Mode Kontras Tinggi",
+    "zoomCursor": "Perbesar Kursor",
+    "stopAnimation": "Hentikan Animasi",
+    "hideImages": "Sembunyikan Gambar",
+    "reset": "Reset Pengaturan"
   }
 }

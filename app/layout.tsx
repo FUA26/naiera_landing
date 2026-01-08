@@ -6,6 +6,7 @@ import { getLocale, getMessages } from "next-intl/server";
 
 import "./globals.css";
 import { Providers } from "@/components/providers";
+import { AccessibilityWidget } from "@/components/shared/accessibility-widget";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <NuqsAdapter>{children}</NuqsAdapter>
+            <AccessibilityWidget />
           </Providers>
         </NextIntlClientProvider>
       </body>
