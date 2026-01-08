@@ -217,7 +217,7 @@ export function MegaMenu() {
                 {t("agency.items.dpr.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/kontak"
                 title={t("agency.items.contact.title")}
                 icon={Contact}
               >

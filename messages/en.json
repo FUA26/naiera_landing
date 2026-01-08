@@ -478,5 +478,175 @@
     "stopAnimation": "Stop Animation",
     "hideImages": "Hide Image",
     "reset": "Reset Settings"
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions (FAQ)",
+    "subtitle": "Find answers to commonly asked questions about our services",
+    "searchPlaceholder": "Search questions...",
+    "categories": {
+      "general": "General",
+      "account": "Account & Registration",
+      "services": "Services",
+      "payment": "Payment"
+    },
+    "items": {
+      "q1": {
+        "question": "What is Super App Naiera?",
+        "answer": "Super App Naiera is an integrated digital platform providing access to various Naiera Regency government services in one app."
+      },
+      "q2": {
+        "question": "How do I register an account?",
+        "answer": "You can register by clicking the 'Register' button on the homepage, then filling out the registration form with valid personal information."
+      },
+      "q3": {
+        "question": "Is this service free?",
+        "answer": "Yes, most basic services on Super App Naiera are free for Naiera Regency residents. Some specific services may require administrative fees."
+      },
+      "q4": {
+        "question": "How do I report a technical issue?",
+        "answer": "You can report technical issues through the Complaint Service menu or contact our helpdesk at (021) 123-4567."
+      },
+      "q5": {
+        "question": "How do I pay taxes through the app?",
+        "answer": "Select Services > Tax & Retribution, enter your tax object number, then follow the payment instructions using various available methods."
+      }
+    },
+    "notFound": "No questions match your search.",
+    "contactCta": "Can't find an answer?",
+    "contactLink": "Contact Us"
+  },
+  "Guide": {
+    "title": "User Guide",
+    "subtitle": "Learn how to use various features and services of Super App Naiera",
+    "readGuide": "Read Guide",
+    "items": {
+      "register": {
+        "title": "How to Register an Account",
+        "desc": "Complete guide to creating a new account on Super App Naiera.",
+        "steps": [
+          "Open the Register page",
+          "Fill in your personal details",
+          "Verify your email or phone",
+          "Your account is ready to use"
+        ]
+      },
+      "tax": {
+        "title": "Tax Payment Guide",
+        "desc": "Easy steps to pay regional taxes online.",
+        "steps": [
+          "Login to your account",
+          "Select Tax & Retribution menu",
+          "Enter your tax object number",
+          "Choose payment method",
+          "Save payment receipt"
+        ]
+      },
+      "document": {
+        "title": "How to Request Documents",
+        "desc": "Guide for requesting population administration documents.",
+        "steps": [
+          "Select the type of document needed",
+          "Fill out the application form",
+          "Upload supporting documents",
+          "Wait for officer verification",
+          "Pick up at office or download digitally"
+        ]
+      },
+      "complaint": {
+        "title": "How to Submit a Complaint",
+        "desc": "Guide to submitting aspirations or complaints to the local government.",
+        "steps": [
+          "Open the Complaint Service menu",
+          "Select report category",
+          "Fill in complaint details",
+          "Attach evidence if available",
+          "Submit and track report status"
+        ]
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Please contact us through the channels below.",
+    "info": {
+      "address": "Office Address",
+      "addressContent": "123 Government St.\nNaiera Regency, 12345\nIndonesia Province",
+      "phone": "Phone",
+      "phoneContent": "(021) 123-4567",
+      "email": "Email",
+      "emailContent": "humas@naiera.go.id",
+      "hours": "Operating Hours",
+      "hoursContent": "Monday - Friday: 08:00 AM - 04:00 PM"
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select message subject",
+      "subjects": {
+        "general": "General Inquiry",
+        "support": "Technical Support",
+        "feedback": "Feedback & Suggestions",
+        "partnership": "Partnership"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully! We will respond shortly."
+    }
+  },
+  "Complaint": {
+    "title": "Complaint Service",
+    "subtitle": "Submit your aspirations, complaints, or reports to the Naiera Regency Government",
+    "intro": "The Online Aspirations and Complaints Service (LAPOR) is a platform to submit various reports, complaints, or aspirations to the local government quickly and transparently.",
+    "process": {
+      "title": "Complaint Process",
+      "steps": {
+        "submit": {
+          "title": "Submit Report",
+          "desc": "Fill out the complaint form completely"
+        },
+        "verify": {
+          "title": "Verification",
+          "desc": "Officers verify your report"
+        },
+        "action": {
+          "title": "Follow Up",
+          "desc": "Related agency handles the report"
+        },
+        "done": {
+          "title": "Completed",
+          "desc": "Report closed and you receive notification"
+        }
+      }
+    },
+    "form": {
+      "title": "Complaint Form",
+      "category": "Report Category",
+      "categoryPlaceholder": "Select category",
+      "categories": {
+        "infrastructure": "Infrastructure (Roads, Bridges, etc.)",
+        "admin": "Administration Services",
+        "social": "Social & Welfare",
+        "health": "Health",
+        "education": "Education",
+        "environment": "Environment",
+        "other": "Other"
+      },
+      "location": "Incident Location",
+      "locationPlaceholder": "E.g.: 45 Freedom St., North Naiera District",
+      "date": "Incident Date",
+      "description": "Complaint Description",
+      "descriptionPlaceholder": "Explain your complaint in detail...",
+      "evidence": "Evidence Attachment (Optional)",
+      "evidenceHint": "Format: JPG, PNG, PDF. Max 5MB.",
+      "anonymous": "Report anonymously",
+      "anonymousHint": "Your identity will be kept confidential",
+      "submit": "Submit Complaint",
+      "success": "Your complaint has been submitted. Ticket number: #NAI-2026-XXXX"
+    }
   }
 }

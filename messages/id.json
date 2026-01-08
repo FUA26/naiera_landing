@@ -484,5 +484,175 @@
     "stopAnimation": "Hentikan Animasi",
     "hideImages": "Sembunyikan Gambar",
     "reset": "Reset Pengaturan"
+  },
+  "Faq": {
+    "title": "Pertanyaan Umum (FAQ)",
+    "subtitle": "Temukan jawaban untuk pertanyaan yang sering diajukan tentang layanan kami",
+    "searchPlaceholder": "Cari pertanyaan...",
+    "categories": {
+      "general": "Umum",
+      "account": "Akun & Pendaftaran",
+      "services": "Layanan",
+      "payment": "Pembayaran"
+    },
+    "items": {
+      "q1": {
+        "question": "Apa itu Super App Naiera?",
+        "answer": "Super App Naiera adalah platform digital terpadu yang menyediakan akses ke berbagai layanan pemerintahan Kabupaten Naiera dalam satu aplikasi."
+      },
+      "q2": {
+        "question": "Bagaimana cara mendaftar akun?",
+        "answer": "Anda dapat mendaftar akun dengan mengklik tombol 'Daftar' di halaman utama, kemudian mengisi formulir pendaftaran dengan data diri yang valid."
+      },
+      "q3": {
+        "question": "Apakah layanan ini gratis?",
+        "answer": "Ya, sebagian besar layanan dasar di Super App Naiera gratis untuk warga Kabupaten Naiera. Beberapa layanan tertentu mungkin memerlukan biaya administrasi sesuai ketentuan."
+      },
+      "q4": {
+        "question": "Bagaimana cara melaporkan masalah teknis?",
+        "answer": "Anda dapat melaporkan masalah teknis melalui menu Layanan Pengaduan atau menghubungi helpdesk kami di (021) 123-4567."
+      },
+      "q5": {
+        "question": "Bagaimana cara membayar pajak melalui aplikasi?",
+        "answer": "Pilih menu Layanan > Pajak & Retribusi, masukkan nomor objek pajak, lalu ikuti instruksi pembayaran melalui berbagai metode yang tersedia."
+      }
+    },
+    "notFound": "Tidak ada pertanyaan yang cocok dengan pencarian Anda.",
+    "contactCta": "Tidak menemukan jawaban?",
+    "contactLink": "Hubungi Kami"
+  },
+  "Guide": {
+    "title": "Panduan Penggunaan",
+    "subtitle": "Pelajari cara menggunakan berbagai fitur dan layanan Super App Naiera",
+    "readGuide": "Baca Panduan",
+    "items": {
+      "register": {
+        "title": "Cara Mendaftar Akun",
+        "desc": "Panduan lengkap untuk membuat akun baru di Super App Naiera.",
+        "steps": [
+          "Buka halaman Daftar",
+          "Isi data diri dengan lengkap",
+          "Verifikasi email atau nomor HP",
+          "Akun Anda siap digunakan"
+        ]
+      },
+      "tax": {
+        "title": "Panduan Bayar Pajak",
+        "desc": "Langkah-langkah mudah untuk membayar pajak daerah secara online.",
+        "steps": [
+          "Login ke akun Anda",
+          "Pilih menu Pajak & Retribusi",
+          "Masukkan nomor objek pajak",
+          "Pilih metode pembayaran",
+          "Simpan bukti pembayaran"
+        ]
+      },
+      "document": {
+        "title": "Cara Mengajukan Surat",
+        "desc": "Panduan pengajuan surat-surat administrasi kependudukan.",
+        "steps": [
+          "Pilih jenis surat yang dibutuhkan",
+          "Isi formulir pengajuan",
+          "Unggah dokumen pendukung",
+          "Tunggu verifikasi petugas",
+          "Ambil surat di kantor atau unduh digital"
+        ]
+      },
+      "complaint": {
+        "title": "Cara Melaporkan Pengaduan",
+        "desc": "Panduan menyampaikan aspirasi atau pengaduan ke pemerintah daerah.",
+        "steps": [
+          "Buka menu Layanan Pengaduan",
+          "Pilih kategori laporan",
+          "Isi detail pengaduan",
+          "Lampirkan bukti jika ada",
+          "Kirim dan pantau status laporan"
+        ]
+      }
+    }
+  },
+  "Contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kami siap membantu Anda. Silakan hubungi kami melalui kontak di bawah ini.",
+    "info": {
+      "address": "Alamat Kantor",
+      "addressContent": "Jl. Pemerintahan No. 123\nKabupaten Naiera, 12345\nProvinsi Indonesia",
+      "phone": "Telepon",
+      "phoneContent": "(021) 123-4567",
+      "email": "Email",
+      "emailContent": "humas@naiera.go.id",
+      "hours": "Jam Operasional",
+      "hoursContent": "Senin - Jumat: 08.00 - 16.00 WIB"
+    },
+    "form": {
+      "title": "Kirim Pesan",
+      "name": "Nama Lengkap",
+      "namePlaceholder": "Masukkan nama lengkap Anda",
+      "email": "Email",
+      "emailPlaceholder": "Masukkan alamat email",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Pilih subjek pesan",
+      "subjects": {
+        "general": "Pertanyaan Umum",
+        "support": "Bantuan Teknis",
+        "feedback": "Saran & Masukan",
+        "partnership": "Kerjasama"
+      },
+      "message": "Pesan",
+      "messagePlaceholder": "Tulis pesan Anda di sini...",
+      "submit": "Kirim Pesan",
+      "success": "Pesan Anda berhasil terkirim! Kami akan segera merespons."
+    }
+  },
+  "Complaint": {
+    "title": "Layanan Pengaduan",
+    "subtitle": "Sampaikan aspirasi, keluhan, atau laporan Anda kepada Pemerintah Kabupaten Naiera",
+    "intro": "Layanan Aspirasi dan Pengaduan Online Rakyat (LAPOR) adalah sarana untuk menyampaikan berbagai laporan, pengaduan, atau aspirasi kepada pemerintah daerah secara cepat dan transparan.",
+    "process": {
+      "title": "Alur Pengaduan",
+      "steps": {
+        "submit": {
+          "title": "Kirim Laporan",
+          "desc": "Isi formulir pengaduan dengan lengkap"
+        },
+        "verify": {
+          "title": "Verifikasi",
+          "desc": "Petugas memverifikasi laporan Anda"
+        },
+        "action": {
+          "title": "Tindak Lanjut",
+          "desc": "Instansi terkait menangani laporan"
+        },
+        "done": {
+          "title": "Selesai",
+          "desc": "Laporan ditutup dan Anda mendapat notifikasi"
+        }
+      }
+    },
+    "form": {
+      "title": "Form Pengaduan",
+      "category": "Kategori Laporan",
+      "categoryPlaceholder": "Pilih kategori",
+      "categories": {
+        "infrastructure": "Infrastruktur (Jalan, Jembatan, dll)",
+        "admin": "Pelayanan Administrasi",
+        "social": "Sosial & Kesejahteraan",
+        "health": "Kesehatan",
+        "education": "Pendidikan",
+        "environment": "Lingkungan Hidup",
+        "other": "Lainnya"
+      },
+      "location": "Lokasi Kejadian",
+      "locationPlaceholder": "Contoh: Jl. Merdeka No. 45, Kec. Naiera Utara",
+      "date": "Tanggal Kejadian",
+      "description": "Deskripsi Pengaduan",
+      "descriptionPlaceholder": "Jelaskan detail pengaduan Anda secara lengkap...",
+      "evidence": "Lampiran Bukti (Opsional)",
+      "evidenceHint": "Format: JPG, PNG, PDF. Maksimal 5MB.",
+      "anonymous": "Laporkan secara anonim",
+      "anonymousHint": "Identitas Anda akan dirahasiakan",
+      "submit": "Kirim Pengaduan",
+      "success": "Pengaduan Anda berhasil dikirim. Nomor tiket: #NAI-2026-XXXX"
+    }
   }
 }

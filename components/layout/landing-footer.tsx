@@ -199,7 +199,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#faq"
+                  href="/faq"
                   className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
                 >
                   <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -208,7 +208,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#panduan"
+                  href="/panduan"
                   className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
                 >
                   <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -217,7 +217,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#kontak"
+                  href="/kontak"
                   className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
                 >
                   <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -226,7 +226,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#layanan-pengaduan"
+                  href="/pengaduan"
                   className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
                 >
                   <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
