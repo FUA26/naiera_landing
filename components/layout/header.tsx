@@ -1,136 +1,68 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { label: "Beranda", href: "#beranda", active: true },
-  { label: "Layanan", href: "#layanan", active: false },
-  { label: "Tentang", href: "#tentang", active: false },
-  { label: "Berita", href: "#berita", active: false },
-  { label: "Kontak", href: "#kontak", active: false },
-];
+import { Code2, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <>
-      <header className="sticky top-0 z-50 h-20 border-b border-slate-200 bg-white/90 shadow-sm backdrop-blur-md">
-        <div className="container mx-auto flex h-full items-center justify-between px-4 md:px-8">
-          {/* Logo Section */}
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-600">
-              <span className="text-xl font-bold text-white">N</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-slate-800">
-                Super App Naiera
-              </span>
-              <span className="hidden text-xs text-slate-500 sm:block">
-                Kabupaten Naiera
-              </span>
-            </div>
+    <header className="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <div className="bg-primary text-primary-foreground flex h-9 w-9 items-center justify-center rounded-lg">
+            <Code2 className="h-5 w-5" />
           </div>
+          <span className="hidden font-bold sm:inline-block">
+            Next.js Boilerplate
+          </span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 md:flex">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={`relative font-medium transition-all duration-300 ${
-                  item.active
-                    ? "text-emerald-600"
-                    : "text-slate-600 hover:text-emerald-600"
-                }`}
-              >
-                {item.label}
-                {item.active && (
-                  <span className="absolute right-0 -bottom-5 left-0 h-0.5 bg-emerald-600" />
-                )}
-              </a>
-            ))}
-          </nav>
+        {/* Navigation Links */}
+        <div className="hidden items-center gap-6 md:flex">
+          <Link
+            href="/docs"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+          >
+            Documentation
+          </Link>
+          <Link
+            href="/components"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+          >
+            Components
+          </Link>
+          <Link
+            href="/examples"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+          >
+            Examples
+          </Link>
+        </div>
 
-          {/* Action Section */}
-          <div className="flex items-center gap-4">
+        {/* Right Side Actions */}
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" asChild>
             <Link
-              href="/auth/login"
-              className="hidden items-center justify-center rounded-lg bg-emerald-600 px-6 py-2 font-medium text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:bg-emerald-700 sm:inline-flex"
+              href="https://github.com/yourusername/boilerplate"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Login
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
             </Link>
+          </Button>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-600 transition-colors hover:text-emerald-600 md:hidden"
-              aria-label="Toggle menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <ThemeToggle />
+
+          <Button size="sm" variant="ghost" className="hidden sm:flex" asChild>
+            <Link href="/auth/login">Login</Link>
+          </Button>
+
+          <Button size="sm" className="hidden sm:flex" asChild>
+            <Link href="/auth/register">Sign Up</Link>
+          </Button>
         </div>
-      </header>
-
-      {/* Mobile Menu Drawer */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-
-          {/* Drawer */}
-          <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl">
-            <div className="flex h-full flex-col">
-              {/* Drawer Header */}
-              <div className="flex items-center justify-between border-b border-slate-200 p-6">
-                <span className="text-lg font-bold text-slate-800">Menu</span>
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-slate-600 transition-colors hover:text-emerald-600"
-                  aria-label="Close menu"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-
-              {/* Navigation Items */}
-              <nav className="flex-1 overflow-y-auto">
-                {navItems.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block border-b border-slate-100 px-6 py-4 font-medium transition-colors ${
-                      item.active
-                        ? "bg-emerald-50 text-emerald-600"
-                        : "text-slate-600 hover:bg-slate-50 hover:text-emerald-600"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
-
-              {/* Drawer Footer */}
-              <div className="border-t border-slate-200 p-6">
-                <Link
-                  href="/auth/login"
-                  className="block w-full rounded-lg bg-emerald-600 px-6 py-3 text-center font-medium text-white shadow-lg shadow-emerald-500/30 transition-all hover:bg-emerald-700"
-                >
-                  Login
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+      </nav>
+    </header>
   );
 }

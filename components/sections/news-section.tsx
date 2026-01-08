@@ -1,6 +1,7 @@
 "use client";
 
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 
 interface NewsArticle {
   id: string;
@@ -13,65 +14,73 @@ interface NewsArticle {
   readTime: string;
 }
 
-const newsArticles: NewsArticle[] = [
-  {
-    id: "1",
-    title: "Kabupaten Naiera Luncurkan Super App untuk Kemudahan Layanan Publik",
-    excerpt:
-      "Pemerintah Kabupaten Naiera resmi meluncurkan aplikasi Super App yang mengintegrasikan lebih dari 100 layanan publik dalam satu platform digital...",
-    category: "Teknologi",
-    date: "5 Januari 2026",
-    image: "/images/news-1.jpg",
-    author: "Humas Pemkab Naiera",
-    readTime: "3 menit",
-  },
-  {
-    id: "2",
-    title: "Program Bantuan UMKM Digital Tahap 2 Dibuka",
-    excerpt:
-      "Dinas Koperasi dan UMKM Kabupaten Naiera membuka kembali program bantuan modal dan pelatihan digital untuk pelaku usaha mikro...",
-    category: "Ekonomi",
-    date: "4 Januari 2026",
-    image: "/images/news-2.jpg",
-    author: "Dinas Koperasi",
-    readTime: "4 menit",
-  },
-  {
-    id: "3",
-    title: "PPDB 2026 Dibuka Secara Online, Ini Cara Mendaftarnya",
-    excerpt:
-      "Pendaftaran Peserta Didik Baru (PPDB) tingkat SD hingga SMA di Kabupaten Naiera tahun ajaran 2026/2027 telah dibuka secara online...",
-    category: "Pendidikan",
-    date: "3 Januari 2026",
-    image: "/images/news-3.jpg",
-    author: "Dinas Pendidikan",
-    readTime: "5 menit",
-  },
-];
-
 export function NewsSection() {
+  const t = useTranslations("News");
+  const locale = useLocale();
+  const dateLocale = locale === "id" ? "id-ID" : "en-US";
+
+  const formatDate = (dateStr: string) => {
+    return new Intl.DateTimeFormat(dateLocale, {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(new Date(dateStr));
+  };
+
+  const newsArticles: NewsArticle[] = [
+    {
+      id: "1",
+      title: t("items.news1.title"),
+      excerpt: t("items.news1.desc"),
+      category: t("items.news1.category"),
+      date: formatDate("2026-01-05"),
+      image: "/images/news-1.jpg",
+      author: t("items.news1.author"),
+      readTime: t("readTime", { minutes: 3 }),
+    },
+    {
+      id: "2",
+      title: t("items.news2.title"),
+      excerpt: t("items.news2.desc"),
+      category: t("items.news2.category"),
+      date: formatDate("2026-01-04"),
+      image: "/images/news-2.jpg",
+      author: t("items.news2.author"),
+      readTime: t("readTime", { minutes: 4 }),
+    },
+    {
+      id: "3",
+      title: t("items.news3.title"),
+      excerpt: t("items.news3.desc"),
+      category: t("items.news3.category"),
+      date: formatDate("2026-01-03"),
+      image: "/images/news-3.jpg",
+      author: t("items.news3.author"),
+      readTime: t("readTime", { minutes: 5 }),
+    },
+  ];
+
   return (
-    <section className="py-16 md:py-20 bg-white" id="berita">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="bg-white py-16 md:py-20" id="berita">
+      <div className="container mx-auto max-w-7xl px-4">
         {/* Section Header */}
-        <div className="flex items-center justify-between mb-12">
+        <div className="mb-12 flex items-center justify-between">
           <div>
-            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
-              Berita Terkini
+            <span className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+              {t("label")}
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
-              Berita & Pengumuman
+            <h2 className="mb-3 text-3xl font-bold text-slate-800 md:text-4xl">
+              {t("title")}
             </h2>
-            <p className="text-slate-600 text-base md:text-lg max-w-2xl">
-              Informasi terbaru seputar kebijakan, program, dan kegiatan
-              Pemerintah Kabupaten Naiera
+            <p className="max-w-2xl text-base text-slate-600 md:text-lg">
+              {t("description")}
             </p>
           </div>
           <a
             href="#semua-berita"
-            className="hidden md:inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors group"
+            className="group hidden items-center gap-2 font-semibold text-emerald-600 transition-colors hover:text-emerald-700 md:inline-flex"
           >
-            Lihat Semua
+            {t("viewAll")}
             <ArrowRight
               size={20}
               className="transition-transform group-hover:translate-x-1"
@@ -80,9 +89,11 @@ export function NewsSection() {
         </div>
 
         {/* Featured News */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Main Featured */}
-          {newsArticles[0] && <NewsCard article={newsArticles[0]} featured />}
+          {newsArticles[0] && (
+            <NewsCard article={newsArticles[0]} featured tRead={t("read")} />
+          )}
 
           {/* Secondary News */}
           <div className="space-y-6">
@@ -96,9 +107,9 @@ export function NewsSection() {
         <div className="text-center md:hidden">
           <a
             href="#semua-berita"
-            className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors group"
+            className="group inline-flex items-center gap-2 font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
           >
-            Lihat Semua Berita
+            {t("viewAllMobile")}
             <ArrowRight
               size={20}
               className="transition-transform group-hover:translate-x-1"
@@ -113,27 +124,28 @@ export function NewsSection() {
 interface NewsCardProps {
   article: NewsArticle;
   featured?: boolean;
+  tRead?: string;
 }
 
-function NewsCard({ article }: NewsCardProps) {
+function NewsCard({ article, tRead }: NewsCardProps) {
   return (
     <a
       href={`#berita/${article.id}`}
-      className="group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      className="group block overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
       {/* Image */}
-      <div className="relative h-64 bg-gradient-to-br from-emerald-100 to-blue-100 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-emerald-100 to-blue-100">
         {/* Placeholder gradient - replace with actual image when available */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-blue-500 opacity-60" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white/80 text-center">
+          <div className="text-center text-white/80">
             <Calendar size={48} className="mx-auto mb-2" />
             <p className="text-sm">Gambar Berita</p>
           </div>
         </div>
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-emerald-600 rounded-full text-xs font-semibold">
+          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-emerald-600 backdrop-blur-sm">
             {article.category}
           </span>
         </div>
@@ -141,15 +153,15 @@ function NewsCard({ article }: NewsCardProps) {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="font-bold text-xl text-slate-800 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2">
+        <h3 className="mb-3 line-clamp-2 text-xl font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
           {article.title}
         </h3>
-        <p className="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-3">
+        <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-slate-600">
           {article.excerpt}
         </p>
 
         {/* Meta */}
-        <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-100">
+        <div className="flex items-center justify-between border-t border-slate-100 pt-4 text-xs text-slate-500">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <Calendar size={14} />
@@ -160,8 +172,8 @@ function NewsCard({ article }: NewsCardProps) {
               {article.readTime}
             </span>
           </div>
-          <span className="text-emerald-600 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-            Baca →
+          <span className="font-semibold text-emerald-600 opacity-0 transition-opacity group-hover:opacity-100">
+            {tRead} →
           </span>
         </div>
       </div>
@@ -173,10 +185,10 @@ function NewsCardCompact({ article }: NewsCardProps) {
   return (
     <a
       href={`#berita/${article.id}`}
-      className="group flex gap-4 bg-white rounded-xl p-4 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all duration-300"
+      className="group flex gap-4 rounded-xl border border-slate-100 bg-white p-4 transition-all duration-300 hover:border-emerald-200 hover:shadow-lg"
     >
       {/* Thumbnail */}
-      <div className="relative w-24 h-24 rounded-lg bg-gradient-to-br from-emerald-100 to-blue-100 flex-shrink-0 overflow-hidden">
+      <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-emerald-100 to-blue-100">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-blue-500 opacity-40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <Calendar size={24} className="text-white/60" />
@@ -184,11 +196,11 @@ function NewsCardCompact({ article }: NewsCardProps) {
       </div>
 
       {/* Content */}
-      <div className="flex-1 min-w-0">
-        <span className="inline-block px-2 py-1 bg-blue-50 text-blue-600 rounded text-xs font-semibold mb-2">
+      <div className="min-w-0 flex-1">
+        <span className="mb-2 inline-block rounded bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600">
           {article.category}
         </span>
-        <h4 className="font-bold text-slate-800 mb-2 group-hover:text-emerald-600 transition-colors line-clamp-2">
+        <h4 className="mb-2 line-clamp-2 font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
           {article.title}
         </h4>
         <div className="flex items-center gap-3 text-xs text-slate-500">

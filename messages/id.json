@@ -1,0 +1,374 @@
+{
+  "Navigation": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "about": "Tentang",
+    "news": "Berita",
+    "contact": "Kontak",
+    "login": "Masuk",
+    "menu": "Menu",
+    "brandName": "Super App Naiera",
+    "brandSubtitle": "Kabupaten Naiera"
+  },
+  "Hero": {
+    "titlePart1": "Satu Aplikasi untuk Semua Layanan",
+    "titlePart2": "Kabupaten Naiera",
+    "subtitle": "Akses ratusan layanan pemerintahan dengan mudah, cepat, dan aman dalam satu platform digital",
+    "searchPlaceholder": "Cari layanan, informasi, atau bantuan...",
+    "popularSearch": "Pencarian populer:",
+    "stats": {
+      "digitalServices": "Layanan Digital",
+      "activeUsers": "Pengguna Aktif",
+      "onlineServices": "Layanan Online"
+    }
+  },
+  "TopBar": {
+    "greeting": {
+      "morning": "Selamat Pagi",
+      "afternoon": "Selamat Siang",
+      "evening": "Selamat Sore",
+      "night": "Selamat Malam"
+    },
+    "citizen": "Warga Naiera",
+    "contact": "Kontak Kami",
+    "help": "Bantuan"
+  },
+  "Services": {
+    "label": "Layanan Digital",
+    "title": "Kategori Layanan",
+    "subtitle": "Akses cepat ke berbagai layanan pemerintahan yang paling sering digunakan",
+    "allServices": "Semua Layanan",
+    "showAll": "Tampilkan Semua Kategori",
+    "showLess": "Tampilkan Lebih Sedikit",
+    "empty": "Tidak ada layanan dalam kategori ini",
+    "access": "Akses",
+    "explore": "Jelajahi Semua Layanan",
+    "stats": {
+      "services": "Layanan Digital",
+      "users": "Pengguna Aktif",
+      "transactions": "Transaksi/Bulan",
+      "rating": "Rating Kepuasan"
+    },
+    "categories": {
+      "population": "Kependudukan",
+      "health": "Kesehatan",
+      "education": "Pendidikan",
+      "economy": "Ekonomi & Bisnis",
+      "manpower": "Ketenagakerjaan",
+      "tourism": "Pariwisata & Kebudayaan",
+      "infrastructure": "Infrastruktur",
+      "social": "Sosial",
+      "environment": "Lingkungan Hidup",
+      "government": "Pemerintahan dan Desa",
+      "ppid": "PPID",
+      "disaster": "Kebencanaan",
+      "multisector": "Multisektoral (Khusus)"
+    },
+    "items": {
+      "ektp": {
+        "name": "E-KTP",
+        "desc": "Pembuatan dan perpanjangan KTP elektronik"
+      },
+      "kk": {
+        "name": "Kartu Keluarga",
+        "desc": "Pengurusan dan pembaruan Kartu Keluarga"
+      },
+      "akta": {
+        "name": "Akta Kelahiran",
+        "desc": "Pengurusan akta kelahiran dan duplikat"
+      },
+      "pindah": {
+        "name": "Surat Pindah",
+        "desc": "Layanan administrasi surat pindah penduduk"
+      },
+      "bpjs": {
+        "name": "BPJS Kesehatan",
+        "desc": "Pendaftaran dan informasi layanan BPJS"
+      },
+      "puskesmas": {
+        "name": "Puskesmas Online",
+        "desc": "Jadwal dokter, antrian, dan konsultasi"
+      },
+      "posyandu": {
+        "name": "Posyandu",
+        "desc": "Jadwal posyandu dan imunisasi balita"
+      },
+      "ppdb": {
+        "name": "PPDB Online",
+        "desc": "Pendaftaran peserta didik baru SD-SMA"
+      },
+      "beasiswa": {
+        "name": "Beasiswa",
+        "desc": "Info dan pendaftaran beasiswa daerah"
+      },
+      "suratSekolah": {
+        "name": "Surat Keterangan Sekolah",
+        "desc": "Pengurusan SKL dan surat rekomendasi"
+      },
+      "izinUsaha": {
+        "name": "Izin Usaha",
+        "desc": "SIUP, TDP, dan izin usaha mikro"
+      },
+      "pajak": {
+        "name": "Pajak Daerah",
+        "desc": "Pembayaran PBB dan pajak usaha"
+      },
+      "modal": {
+        "name": "Bantuan Modal UMKM",
+        "desc": "Pengajuan bantuan modal usaha"
+      },
+      "kartuKuning": {
+        "name": "Kartu Kuning",
+        "desc": "Kartu pencari kerja (AK1)"
+      },
+      "jobFair": {
+        "name": "Job Fair",
+        "desc": "Info lowongan kerja dan bursa kerja"
+      },
+      "pelatihan": {
+        "name": "Pelatihan Kerja",
+        "desc": "Program pelatihan dan sertifikasi"
+      },
+      "wisata": {
+        "name": "Destinasi Wisata",
+        "desc": "Panduan wisata dan event budaya"
+      },
+      "izinEvent": {
+        "name": "Izin Event",
+        "desc": "Perizinan acara kebudayaan dan festival"
+      },
+      "imb": {
+        "name": "IMB (Izin Mendirikan Bangunan)",
+        "desc": "Permohonan IMB untuk bangunan baru"
+      },
+      "aduanInfra": {
+        "name": "Aduan Infrastruktur",
+        "desc": "Laporan jalan rusak, lampu mati, dll"
+      },
+      "transportasi": {
+        "name": "Transportasi Umum",
+        "desc": "Jadwal dan rute angkutan umum"
+      },
+      "bansos": {
+        "name": "Bantuan Sosial",
+        "desc": "PKH, BPNT, dan bantuan langsung"
+      },
+      "dtks": {
+        "name": "DTKS",
+        "desc": "Pendaftaran dan update data keluarga"
+      },
+      "bankSampah": {
+        "name": "Bank Sampah",
+        "desc": "Pengelolaan sampah dan daur ulang"
+      },
+      "aduanLingkungan": {
+        "name": "Aduan Lingkungan",
+        "desc": "Laporan pencemaran dan pelanggaran"
+      },
+      "suratRt": {
+        "name": "Surat Pengantar RT/RW",
+        "desc": "Layanan surat pengantar dari RT/RW"
+      },
+      "danaDesa": {
+        "name": "Dana Desa",
+        "desc": "Transparansi dan laporan dana desa"
+      },
+      "infoPublik": {
+        "name": "Permohonan Informasi",
+        "desc": "Akses informasi publik sesuai UU KIP"
+      },
+      "dokumen": {
+        "name": "Dokumen Publik",
+        "desc": "Akses dokumen dan regulasi daerah"
+      },
+      "darurat": {
+        "name": "Tanggap Darurat",
+        "desc": "Hotline dan layanan emergency 24/7"
+      },
+      "infoBencana": {
+        "name": "Info Cuaca & Bencana",
+        "desc": "Peringatan dini dan info cuaca"
+      },
+      "layananTerpadu": {
+        "name": "Layanan Terpadu",
+        "desc": "One-stop service untuk berbagai layanan"
+      },
+      "pengaduan": {
+        "name": "Pengaduan Umum",
+        "desc": "Aspirasi dan pengaduan masyarakat"
+      }
+    },
+    "badges": {
+      "popular": "Populer",
+      "new": "Baru",
+      "important": "Penting"
+    }
+  },
+  "Features": {
+    "label": "Mengapa Memilih Kami",
+    "title": "Transformasi Digital untuk Pelayanan Lebih Baik",
+    "description": "Super App Naiera hadir untuk memberikan pengalaman layanan publik yang modern, efisien, dan transparan bagi seluruh warga Kabupaten Naiera",
+    "ctaStart": "Mulai Sekarang",
+    "ctaLearn": "Pelajari Lebih Lanjut",
+    "items": {
+      "fast": {
+        "title": "Cepat & Efisien",
+        "desc": "Proses layanan yang lebih cepat dengan sistem terintegrasi dan otomasi digital."
+      },
+      "secure": {
+        "title": "Aman & Terpercaya",
+        "desc": "Data Anda dilindungi dengan enkripsi tingkat tinggi dan standar keamanan nasional."
+      },
+      "available": {
+        "title": "24/7 Tersedia",
+        "desc": "Akses layanan kapan saja, di mana saja, tanpa harus datang ke kantor."
+      },
+      "easy": {
+        "title": "Mudah Digunakan",
+        "desc": "Antarmuka yang intuitif dan ramah pengguna untuk semua kalangan usia."
+      }
+    }
+  },
+  "News": {
+    "label": "Berita Terkini",
+    "title": "Berita & Pengumuman",
+    "description": "Informasi terbaru seputar kebijakan, program, dan kegiatan Pemerintah Kabupaten Naiera",
+    "viewAll": "Lihat Semua",
+    "viewAllMobile": "Lihat Semua Berita",
+    "read": "Baca",
+    "readTime": "{minutes} menit",
+    "items": {
+      "news1": {
+        "title": "Kabupaten Naiera Luncurkan Super App untuk Kemudahan Layanan Publik",
+        "desc": "Pemerintah Kabupaten Naiera resmi meluncurkan aplikasi Super App yang mengintegrasikan lebih dari 100 layanan publik dalam satu platform digital...",
+        "category": "Teknologi",
+        "author": "Humas Pemkab Naiera"
+      },
+      "news2": {
+        "title": "Program Bantuan UMKM Digital Tahap 2 Dibuka",
+        "desc": "Dinas Koperasi dan UMKM Kabupaten Naiera membuka kembali program bantuan modal dan pelatihan digital untuk pelaku usaha mikro...",
+        "category": "Ekonomi",
+        "author": "Dinas Koperasi"
+      },
+      "news3": {
+        "title": "PPDB 2026 Dibuka Secara Online, Ini Cara Mendaftarnya",
+        "desc": "Pendaftaran Peserta Didik Baru (PPDB) tingkat SD hingga SMA di Kabupaten Naiera tahun ajaran 2026/2027 telah dibuka secara online...",
+        "category": "Pendidikan",
+        "author": "Dinas Pendidikan"
+      }
+    }
+  },
+  "Events": {
+    "label": "Agenda & Acara",
+    "title": "Agenda Kabupaten Naiera",
+    "description": "Dapatkan informasi terkini semua kegiatan yang diselenggarakan di Kabupaten Naiera",
+    "viewMore": "Selengkapnya",
+    "viewOthers": "Lihat Agenda Lainnya",
+    "representative": "Wakili Gubernur",
+    "completed": "Telah Selesai",
+    "finished": "Agenda Telah Selesai",
+    "calToday": "Hari ini",
+    "calHasEvent": "Ada agenda",
+    "calNoEvent": "Tidak ada agenda",
+    "calNoEventDesc": "Belum ada agenda untuk saat ini",
+    "items": {
+      "event1": {
+        "title": "Kegiatan Rakorwasda dan Hakordia 2025 Inspektorat Provinsi Kabupaten Naiera",
+        "category": "Agenda Offline",
+        "desc": "Kegiatan Rakorwasda dan Hakordia 2025 Inspektorat Provinsi Kabupaten Naiera"
+      },
+      "event2": {
+        "title": "Festival Kampungan Kabupaten Majalengka 2025",
+        "category": "Festival"
+      },
+      "event3": {
+        "title": "Drama Musikal Rahvayana: Kala Cinta di Jabar",
+        "category": "Budaya"
+      },
+      "event4": {
+        "title": "Pelatihan Digital Marketing UMKM",
+        "category": "Pelatihan"
+      },
+      "event5": {
+        "title": "Job Fair Kabupaten Naiera 2026",
+        "category": "Career"
+      }
+    }
+  },
+  "AppDownload": {
+    "label": "Download Aplikasi",
+    "title": "Download Super App Naiera",
+    "description": "Akses semua layanan pemerintahan dalam satu aplikasi. Download sekarang dan nikmati kemudahan layanan digital 24/7.",
+    "downloadAt": "Download di",
+    "qrTitle": "Scan QR Code",
+    "qrDesc": "Untuk download langsung dari smartphone",
+    "features": {
+      "fast": {
+        "title": "Cepat & Mudah",
+        "desc": "Proses layanan hanya dalam hitungan menit"
+      },
+      "secure": {
+        "title": "Aman & Terpercaya",
+        "desc": "Data Anda dilindungi dengan enkripsi tingkat tinggi"
+      },
+      "rating": {
+        "title": "Rating 4.8/5",
+        "desc": "Dipercaya oleh 50.000+ pengguna aktif"
+      }
+    },
+    "banner": {
+      "services": "100+ Layanan Digital",
+      "praise": "Siap melayani Anda 24/7"
+    }
+  },
+  "Footer": {
+    "brandDescription": "Platform digital terpadu untuk mengakses seluruh layanan pemerintahan Kabupaten Naiera. Transformasi digital untuk pelayanan publik yang lebih baik, cepat, dan transparan.",
+    "followUs": "Ikuti Kami",
+    "services": {
+      "title": "Layanan",
+      "population": "Kependudukan",
+      "health": "Kesehatan",
+      "education": "Pendidikan",
+      "economy": "Ekonomi & Bisnis",
+      "manpower": "Ketenagakerjaan",
+      "tourism": "Pariwisata",
+      "infrastructure": "Infrastruktur",
+      "social": "Sosial"
+    },
+    "about": {
+      "title": "Tentang",
+      "aboutUs": "Tentang Kami",
+      "visionMission": "Visi & Misi",
+      "structure": "Struktur Organisasi",
+      "news": "Berita & Pengumuman",
+      "events": "Kalender Acara",
+      "careers": "Karir"
+    },
+    "help": {
+      "title": "Bantuan",
+      "faq": "FAQ",
+      "guide": "Panduan Penggunaan",
+      "contactUs": "Hubungi Kami",
+      "complaints": "Layanan Pengaduan",
+      "downloadApp": "Download Aplikasi"
+    },
+    "contact": {
+      "title": "Kontak",
+      "address": "Alamat",
+      "addressContent": "Jl. Pemerintahan No. 123\nKabupaten Naiera, 12345\nProvinsi Indonesia",
+      "phone": "Telepon",
+      "email": "Email"
+    },
+    "brandName": "Super App Naiera",
+    "brandSubtitle": "Kabupaten Naiera",
+    "relatedLinks": "Link Terkait",
+    "copyright": "© {year} Pemerintah Kabupaten Naiera. Semua hak dilindungi undang-undang.",
+    "legal": {
+      "privacy": "Kebijakan Privasi",
+      "terms": "Syarat & Ketentuan",
+      "disclaimer": "Disclaimer",
+      "sitemap": "Sitemap"
+    },
+    "version": "Dikembangkan dengan ❤️ untuk warga Kabupaten Naiera"
+  }
+}

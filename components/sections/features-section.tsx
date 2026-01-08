@@ -2,6 +2,7 @@
 
 import { Shield, Zap, Users, Clock } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface Feature {
   icon: LucideIcon;
@@ -9,54 +10,50 @@ interface Feature {
   description: string;
 }
 
-const features: Feature[] = [
-  {
-    icon: Zap,
-    title: "Cepat & Efisien",
-    description:
-      "Proses layanan yang lebih cepat dengan sistem terintegrasi dan otomasi digital.",
-  },
-  {
-    icon: Shield,
-    title: "Aman & Terpercaya",
-    description:
-      "Data Anda dilindungi dengan enkripsi tingkat tinggi dan standar keamanan nasional.",
-  },
-  {
-    icon: Clock,
-    title: "24/7 Tersedia",
-    description:
-      "Akses layanan kapan saja, di mana saja, tanpa harus datang ke kantor.",
-  },
-  {
-    icon: Users,
-    title: "Mudah Digunakan",
-    description:
-      "Antarmuka yang intuitif dan ramah pengguna untuk semua kalangan usia.",
-  },
-];
-
 export function FeaturesSection() {
+  const t = useTranslations("Features");
+
+  const features: Feature[] = [
+    {
+      icon: Zap,
+      title: t("items.fast.title"),
+      description: t("items.fast.desc"),
+    },
+    {
+      icon: Shield,
+      title: t("items.secure.title"),
+      description: t("items.secure.desc"),
+    },
+    {
+      icon: Clock,
+      title: t("items.available.title"),
+      description: t("items.available.desc"),
+    },
+    {
+      icon: Users,
+      title: t("items.easy.title"),
+      description: t("items.easy.desc"),
+    },
+  ];
+
   return (
-    <section className="py-16 md:py-24 bg-white" id="tentang">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="bg-white py-16 md:py-24" id="tentang">
+      <div className="container mx-auto max-w-7xl px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-            Mengapa Memilih Kami
+        <div className="mb-16 text-center">
+          <span className="mb-4 inline-block rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+            {t("label")}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-            Transformasi Digital untuk Pelayanan Lebih Baik
+          <h2 className="mb-4 text-3xl font-bold text-slate-800 md:text-4xl">
+            {t("title")}
           </h2>
-          <p className="text-slate-600 text-base md:text-lg max-w-3xl mx-auto">
-            Super App Naiera hadir untuk memberikan pengalaman layanan publik
-            yang modern, efisien, dan transparan bagi seluruh warga Kabupaten
-            Naiera
+          <p className="mx-auto max-w-3xl text-base text-slate-600 md:text-lg">
+            {t("description")}
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} feature={feature} index={index} />
           ))}
@@ -64,12 +61,12 @@ export function FeaturesSection() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4">
-            <button className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:scale-105">
-              Mulai Sekarang
+          <div className="inline-flex flex-col items-center gap-4 sm:flex-row">
+            <button className="rounded-lg bg-emerald-600 px-8 py-3 font-semibold text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:scale-105 hover:bg-emerald-700">
+              {t("ctaStart")}
             </button>
-            <button className="px-8 py-3 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-lg border-2 border-slate-300 transition-all duration-300">
-              Pelajari Lebih Lanjut
+            <button className="rounded-lg border-2 border-slate-300 bg-white px-8 py-3 font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50">
+              {t("ctaLearn")}
             </button>
           </div>
         </div>
@@ -88,21 +85,21 @@ function FeatureCard({ feature, index }: FeatureCardProps) {
 
   return (
     <div
-      className="group p-6 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+      className="group animate-fade-in-up rounded-2xl border border-slate-100 p-6 transition-all duration-300 hover:border-emerald-200 hover:shadow-xl"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Icon */}
-      <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:scale-110">
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white">
         <Icon size={28} strokeWidth={2} />
       </div>
 
       {/* Title */}
-      <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-emerald-600 transition-colors">
+      <h3 className="mb-3 text-xl font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
         {feature.title}
       </h3>
 
       {/* Description */}
-      <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+      <p className="leading-relaxed text-slate-600">{feature.description}</p>
     </div>
   );
 }

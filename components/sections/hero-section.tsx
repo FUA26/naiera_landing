@@ -1,10 +1,13 @@
 "use client";
 
 import { Search } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
-// import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function HeroSection() {
+  const t = useTranslations("Hero");
+  const tServices = useTranslations("Services");
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e: React.FormEvent) => {
@@ -12,6 +15,13 @@ export function HeroSection() {
     // Handle search logic here
     // console.log("Searching for:", searchQuery);
   };
+
+  const popularSearches = [
+    tServices("items.ektp.name"),
+    tServices("items.suratSekolah.name"),
+    tServices("items.pajak.name"),
+    tServices("items.izinUsaha.name"),
+  ];
 
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center px-4 text-center">
@@ -21,7 +31,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-slate-900" />
 
         {/* Background Image */}
-        {/* <Image
+        <Image
           src="/images/background.png"
           alt=""
           fill
@@ -29,7 +39,7 @@ export function HeroSection() {
           quality={90}
           className="object-cover"
           sizes="100vw"
-        /> */}
+        />
 
         {/* Overlay Gradient for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80" />
@@ -39,15 +49,14 @@ export function HeroSection() {
       <div className="mx-auto max-w-5xl space-y-8">
         {/* Hero Title */}
         <h1 className="animate-fade-in-up text-4xl leading-tight font-bold text-white drop-shadow-md md:text-5xl lg:text-6xl">
-          Satu Aplikasi untuk Semua Layanan
+          {t("titlePart1")}
           <br />
-          <span className="text-emerald-400">Kabupaten Naiera</span>
+          <span className="text-emerald-400">{t("titlePart2")}</span>
         </h1>
 
         {/* Hero Subtitle */}
         <p className="animate-fade-in-up animation-delay-200 mx-auto max-w-2xl text-base leading-relaxed text-slate-200 md:text-lg lg:text-xl">
-          Akses ratusan layanan pemerintahan dengan mudah, cepat, dan aman dalam
-          satu platform digital
+          {t("subtitle")}
         </p>
 
         {/* Search Bar */}
@@ -57,7 +66,7 @@ export function HeroSection() {
               type="search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Cari layanan, informasi, atau bantuan..."
+              placeholder={t("searchPlaceholder")}
               className="h-14 w-full rounded-full bg-white/95 pr-14 pl-5 text-base text-slate-800 shadow-2xl backdrop-blur-sm transition-all duration-300 placeholder:text-slate-400 focus:ring-4 focus:ring-emerald-500/30 focus:outline-none md:h-16 md:pr-16 md:pl-6 md:text-lg"
               aria-label="Cari layanan pemerintahan"
             />
@@ -72,8 +81,8 @@ export function HeroSection() {
 
           {/* Quick Search Suggestions */}
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-sm">
-            <span className="text-slate-300">Pencarian populer:</span>
-            {["E-KTP", "Surat Keterangan", "Pajak", "Perizinan"].map((item) => (
+            <span className="text-slate-300">{t("popularSearch")}</span>
+            {popularSearches.map((item) => (
               <button
                 key={item}
                 onClick={() => setSearchQuery(item)}
@@ -92,7 +101,7 @@ export function HeroSection() {
               100+
             </div>
             <div className="mt-1 text-xs text-slate-300 md:text-sm">
-              Layanan Digital
+              {t("stats.digitalServices")}
             </div>
           </div>
           <div className="border-x border-white/20 text-center">
@@ -100,7 +109,7 @@ export function HeroSection() {
               50K+
             </div>
             <div className="mt-1 text-xs text-slate-300 md:text-sm">
-              Pengguna Aktif
+              {t("stats.activeUsers")}
             </div>
           </div>
           <div className="text-center">
@@ -108,7 +117,7 @@ export function HeroSection() {
               24/7
             </div>
             <div className="mt-1 text-xs text-slate-300 md:text-sm">
-              Layanan Online
+              {t("stats.onlineServices")}
             </div>
           </div>
         </div>

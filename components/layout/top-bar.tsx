@@ -1,81 +1,70 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 export function TopBar() {
+  const t = useTranslations("TopBar");
+  const locale = useLocale();
   const [currentDate, setCurrentDate] = useState("");
-  const [greeting, setGreeting] = useState("");
+  const [greetingKey, setGreetingKey] = useState<
+    "morning" | "afternoon" | "evening" | "night"
+  >("morning");
 
   useEffect(() => {
     // Set date
-    const days = [
-      "Minggu",
-      "Senin",
-      "Selasa",
-      "Rabu",
-      "Kamis",
-      "Jumat",
-      "Sabtu",
-    ];
-    const months = [
-      "Januari",
-      "Februari",
-      "Maret",
-      "April",
-      "Mei",
-      "Juni",
-      "Juli",
-      "Agustus",
-      "September",
-      "Oktober",
-      "November",
-      "Desember",
-    ];
-
     const now = new Date();
-    const dayName = days[now.getDay()];
-    const day = now.getDate();
-    const monthName = months[now.getMonth()];
-    const year = now.getFullYear();
 
-    setCurrentDate(`${dayName}, ${day} ${monthName} ${year}`);
+    // Check if locale is 'id' (Indonesian) or 'en' (English)
+    // Map 'id' to 'id-ID' and 'en' to 'en-US' for Intl format if strictly needed,
+    // but usually 'id' and 'en' work fine in browsers.
+    const dateLocale = locale === "id" ? "id-ID" : "en-US";
+
+    const formattedDate = new Intl.DateTimeFormat(dateLocale, {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(now);
+
+    setCurrentDate(formattedDate);
 
     // Set greeting based on time
     const hour = now.getHours();
     if (hour < 12) {
-      setGreeting("Selamat Pagi");
+      setGreetingKey("morning");
     } else if (hour < 15) {
-      setGreeting("Selamat Siang");
+      setGreetingKey("afternoon");
     } else if (hour < 18) {
-      setGreeting("Selamat Sore");
+      setGreetingKey("evening");
     } else {
-      setGreeting("Selamat Malam");
+      setGreetingKey("night");
     }
-  }, []);
+  }, [locale]);
 
   return (
     <div className="h-10 bg-slate-900 text-slate-200">
-      <div className="container mx-auto flex items-center justify-between h-full px-4 md:px-8">
+      <div className="container mx-auto flex h-full items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-4">
-          <span className="text-xs md:text-sm font-medium">{currentDate}</span>
-          <span className="hidden md:block border-l border-slate-700 h-4" />
-          <span className="hidden md:block text-sm">
-            {greeting}, Warga Naiera
+          <span className="text-xs font-medium md:text-sm">{currentDate}</span>
+          <span className="hidden h-4 border-l border-slate-700 md:block" />
+          <span className="hidden text-sm md:block">
+            {t(`greeting.${greetingKey}`)}, {t("citizen")}
           </span>
         </div>
-        <div className="flex items-center gap-3 md:gap-4 text-xs md:text-sm">
+        <div className="flex items-center gap-3 text-xs md:gap-4 md:text-sm">
           <a
             href="#kontak"
-            className="hover:text-white transition-colors duration-200"
+            className="transition-colors duration-200 hover:text-white"
           >
-            Kontak Kami
+            {t("contact")}
           </a>
           <span className="text-slate-700">|</span>
           <a
             href="#bantuan"
-            className="hover:text-white transition-colors duration-200"
+            className="transition-colors duration-200 hover:text-white"
           >
-            Bantuan
+            {t("help")}
           </a>
         </div>
       </div>

@@ -67,7 +67,7 @@ export default function SettingsPage() {
               <Label>Logo</Label>
               <div className="flex items-center gap-4">
                 <Avatar className="h-16 w-16">
-                  <AvatarImage src="/logo.png" />
+                  <AvatarImage src="/naiera.png" />
                   <AvatarFallback>
                     <IconPhoto className="h-8 w-8" />
                   </AvatarFallback>

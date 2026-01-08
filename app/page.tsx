@@ -1,6 +1,6 @@
 import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/landing-header";
+import { Footer } from "@/components/layout/landing-footer";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { FeaturesSection } from "@/components/sections/features-section";

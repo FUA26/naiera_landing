@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 
 import "./globals.css";
 import { Providers } from "@/components/providers";
@@ -23,19 +25,28 @@ export const metadata: Metadata = {
     "pemerintahan",
     "e-government",
   ],
+  icons: {
+    icon: "/naiera.png",
+    apple: "/naiera.png",
+  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="id" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${fontSans.variable} font-sans antialiased`}>
-        <Providers>
-          <NuqsAdapter>{children}</NuqsAdapter>
-        </Providers>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            <NuqsAdapter>{children}</NuqsAdapter>
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
