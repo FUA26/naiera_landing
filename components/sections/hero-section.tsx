@@ -51,7 +51,7 @@ export function HeroSection() {
         <h1 className="animate-fade-in-up text-4xl leading-tight font-bold text-white drop-shadow-md md:text-5xl lg:text-6xl">
           {t("titlePart1")}
           <br />
-          <span className="text-emerald-400">{t("titlePart2")}</span>
+          <span className="text-primary">{t("titlePart2")}</span>
         </h1>
 
         {/* Hero Subtitle */}
@@ -67,12 +67,12 @@ export function HeroSection() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t("searchPlaceholder")}
-              className="h-14 w-full rounded-full bg-white/95 pr-14 pl-5 text-base text-slate-800 shadow-2xl backdrop-blur-sm transition-all duration-300 placeholder:text-slate-400 focus:ring-4 focus:ring-emerald-500/30 focus:outline-none md:h-16 md:pr-16 md:pl-6 md:text-lg"
+              className="focus:ring-primary/30 h-14 w-full rounded-full bg-white/95 pr-14 pl-5 text-base text-slate-800 shadow-2xl backdrop-blur-sm transition-all duration-300 placeholder:text-slate-400 focus:ring-4 focus:outline-none md:h-16 md:pr-16 md:pl-6 md:text-lg"
               aria-label="Cari layanan pemerintahan"
             />
             <button
               type="submit"
-              className="absolute top-2 right-2 bottom-2 flex aspect-square items-center justify-center rounded-full bg-emerald-600 text-white shadow-lg transition-all duration-300 hover:bg-emerald-700 active:scale-95"
+              className="bg-primary text-primary-foreground hover:bg-primary-hover absolute top-2 right-2 bottom-2 flex aspect-square items-center justify-center rounded-full shadow-lg transition-all duration-300 active:scale-95"
               aria-label="Cari"
             >
               <Search size={24} />
@@ -97,7 +97,7 @@ export function HeroSection() {
         {/* Stats or Additional Info */}
         <div className="animate-fade-in-up animation-delay-600 mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 md:gap-8">
           <div className="text-center">
-            <div className="text-2xl font-bold text-emerald-400 md:text-4xl">
+            <div className="text-primary text-2xl font-bold md:text-4xl">
               100+
             </div>
             <div className="mt-1 text-xs text-slate-300 md:text-sm">
@@ -105,7 +105,7 @@ export function HeroSection() {
             </div>
           </div>
           <div className="border-x border-white/20 text-center">
-            <div className="text-2xl font-bold text-emerald-400 md:text-4xl">
+            <div className="text-primary text-2xl font-bold md:text-4xl">
               50K+
             </div>
             <div className="mt-1 text-xs text-slate-300 md:text-sm">
@@ -113,7 +113,7 @@ export function HeroSection() {
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-emerald-400 md:text-4xl">
+            <div className="text-primary text-2xl font-bold md:text-4xl">
               24/7
             </div>
             <div className="mt-1 text-xs text-slate-300 md:text-sm">

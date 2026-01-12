@@ -54,14 +54,14 @@ export function TopBar() {
         </div>
         <div className="flex items-center gap-3 text-xs md:gap-4 md:text-sm">
           <a
-            href="#kontak"
+            href="/kontak"
             className="transition-colors duration-200 hover:text-white"
           >
             {t("contact")}
           </a>
           <span className="text-slate-700">|</span>
           <a
-            href="#bantuan"
+            href="/faq"
             className="transition-colors duration-200 hover:text-white"
           >
             {t("help")}

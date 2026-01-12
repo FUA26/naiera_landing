@@ -54,7 +54,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <a
                   href="#facebook"
-                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-emerald-600"
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-primary"
                   aria-label="Facebook"
                 >
                   <Facebook
@@ -64,7 +64,7 @@ export function Footer() {
                 </a>
                 <a
                   href="#twitter"
-                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-emerald-600"
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-primary"
                   aria-label="Twitter"
                 >
                   <Twitter
@@ -74,7 +74,7 @@ export function Footer() {
                 </a>
                 <a
                   href="#instagram"
-                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-emerald-600"
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-primary"
                   aria-label="Instagram"
                 >
                   <Instagram
@@ -84,7 +84,7 @@ export function Footer() {
                 </a>
                 <a
                   href="#youtube"
-                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-emerald-600"
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-300 hover:bg-primary"
                   aria-label="Youtube"
                 >
                   <Youtube
@@ -99,26 +99,26 @@ export function Footer() {
           {/* Layanan - Spans 2 columns */}
           <div className="lg:col-span-2">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-white">
-              <Building2 size={20} className="text-emerald-400" />
+              <Building2 size={20} className="text-primary" />
               {t("services.title")}
             </h3>
             <ul className="space-y-3">
               {[
-                "population",
-                "health",
-                "education",
-                "economy",
-                "manpower",
-                "tourism",
-                "infrastructure",
-                "social",
-              ].map((key) => (
+                { key: "population", slug: "/layanan/e-ktp" },
+                { key: "health", slug: "/layanan/bpjs-kesehatan" },
+                { key: "education", slug: "/layanan/ppdb" },
+                { key: "economy", slug: "/layanan/pajak-daerah" },
+                { key: "manpower", slug: "/layanan/kartu-kuning" },
+                { key: "tourism", slug: "/informasi-publik/destinasi-wisata" },
+                { key: "infrastructure", slug: "/layanan/imb" },
+                { key: "social", slug: "/layanan/bansos" },
+              ].map(({ key, slug }) => (
                 <li key={key}>
                   <a
-                    href={`#layanan-${key}`}
-                    className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                    href={slug}
+                    className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                   >
-                    <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                     {t(`services.${key}`)}
                   </a>
                 </li>
@@ -129,61 +129,61 @@ export function Footer() {
           {/* Tentang - Spans 2 columns */}
           <div className="lg:col-span-2">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-white">
-              <Info size={20} className="text-emerald-400" />
+              <Info size={20} className="text-primary" />
               {t("about.title")}
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#tentang-kami"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/pemerintahan/profil"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("about.aboutUs")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#visi-misi"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/pemerintahan/profil"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("about.visionMission")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#struktur"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/pemerintahan/struktur"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("about.structure")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#berita"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/informasi-publik/berita-terkini"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("about.news")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#acara"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/informasi-publik/agenda-kegiatan"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("about.events")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#karir"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/informasi-publik/pengumuman"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("about.careers")}
                 </a>
               </li>
@@ -193,52 +193,52 @@ export function Footer() {
           {/* Bantuan - Spans 2 columns */}
           <div className="lg:col-span-2">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-white">
-              <FileText size={20} className="text-emerald-400" />
+              <FileText size={20} className="text-primary" />
               {t("help.title")}
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="/faq"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("help.faq")}
                 </a>
               </li>
               <li>
                 <a
                   href="/panduan"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("help.guide")}
                 </a>
               </li>
               <li>
                 <a
                   href="/kontak"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("help.contactUs")}
                 </a>
               </li>
               <li>
                 <a
                   href="/pengaduan"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <span className="h-1 w-1 rounded-full bg-emerald-400 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <span className="h-1 w-1 rounded-full bg-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   {t("help.complaints")}
                 </a>
               </li>
               <li>
                 <a
-                  href="#download"
-                  className="group inline-flex items-center gap-2 transition-colors hover:text-emerald-400"
+                  href="/panduan"
+                  className="group inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
-                  <Smartphone size={14} className="text-emerald-400" />
+                  <Smartphone size={14} className="text-primary" />
                   {t("help.downloadApp")}
                 </a>
               </li>
@@ -248,12 +248,12 @@ export function Footer() {
           {/* Contact Info - Spans 2 columns */}
           <div className="lg:col-span-2">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-white">
-              <Phone size={20} className="text-emerald-400" />
+              <Phone size={20} className="text-primary" />
               {t("contact.title")}
             </h3>
             <ul className="space-y-4">
               <li className="group flex items-start gap-3">
-                <MapPin size={18} className="mt-1 shrink-0 text-emerald-400" />
+                <MapPin size={18} className="mt-1 shrink-0 text-primary" />
                 <div>
                   <p className="mb-1 text-sm font-medium text-white">
                     {t("contact.address")}
@@ -264,42 +264,42 @@ export function Footer() {
                 </div>
               </li>
               <li className="group flex items-start gap-3">
-                <Phone size={18} className="mt-1 shrink-0 text-emerald-400" />
+                <Phone size={18} className="mt-1 shrink-0 text-primary" />
                 <div>
                   <p className="mb-1 text-sm font-medium text-white">
                     {t("contact.phone")}
                   </p>
                   <a
                     href="tel:+622112345678"
-                    className="text-sm transition-colors hover:text-emerald-400"
+                    className="text-sm transition-colors hover:text-primary"
                   >
                     (021) 1234-5678
                   </a>
                   <br />
                   <a
                     href="tel:+622198765432"
-                    className="text-sm transition-colors hover:text-emerald-400"
+                    className="text-sm transition-colors hover:text-primary"
                   >
                     (021) 9876-5432
                   </a>
                 </div>
               </li>
               <li className="group flex items-start gap-3">
-                <Mail size={18} className="mt-1 shrink-0 text-emerald-400" />
+                <Mail size={18} className="mt-1 shrink-0 text-primary" />
                 <div>
                   <p className="mb-1 text-sm font-medium text-white">
                     {t("contact.email")}
                   </p>
                   <a
                     href="mailto:info@naiera.go.id"
-                    className="text-sm transition-colors hover:text-emerald-400"
+                    className="text-sm transition-colors hover:text-primary"
                   >
                     info@naiera.go.id
                   </a>
                   <br />
                   <a
                     href="mailto:layanan@naiera.go.id"
-                    className="text-sm transition-colors hover:text-emerald-400"
+                    className="text-sm transition-colors hover:text-primary"
                   >
                     layanan@naiera.go.id
                   </a>
@@ -314,19 +314,19 @@ export function Footer() {
           <h4 className="mb-4 font-semibold text-white">{t("relatedLinks")}</h4>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
             {[
-              { name: "Kemendagri", url: "#" },
-              { name: "KOMINFO", url: "#" },
-              { name: "BPS", url: "#" },
-              { name: "LKPP", url: "#" },
-              { name: "OSS", url: "#" },
-              { name: "PPID", url: "#" },
+              { name: "Kemendagri", url: "https://www.kemendagri.go.id" },
+              { name: "KOMINFO", url: "https://www.kominfo.go.id" },
+              { name: "BPS", url: "https://www.bps.go.id" },
+              { name: "LKPP", url: "https://www.lkpp.go.id" },
+              { name: "OSS", url: "https://oss.go.id" },
+              { name: "PPID", url: "/informasi-publik/ppid" },
             ].map((link) => (
               <a
                 key={link.name}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-emerald-400"
+                className="group flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-primary"
               >
                 <ExternalLink size={14} className="shrink-0" />
                 <span>{link.name}</span>
@@ -348,29 +348,29 @@ export function Footer() {
             {/* Legal Links */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
               <a
-                href="#privasi"
-                className="text-slate-400 transition-colors hover:text-emerald-400"
+                href="/kebijakan-privasi"
+                className="text-slate-400 transition-colors hover:text-primary"
               >
                 {t("legal.privacy")}
               </a>
               <span className="text-slate-700">|</span>
               <a
-                href="#syarat"
-                className="text-slate-400 transition-colors hover:text-emerald-400"
+                href="/syarat-ketentuan"
+                className="text-slate-400 transition-colors hover:text-primary"
               >
                 {t("legal.terms")}
               </a>
               <span className="text-slate-700">|</span>
               <a
-                href="#disclaimer"
-                className="text-slate-400 transition-colors hover:text-emerald-400"
+                href="/disclaimer"
+                className="text-slate-400 transition-colors hover:text-primary"
               >
                 {t("legal.disclaimer")}
               </a>
               <span className="text-slate-700">|</span>
               <a
-                href="#sitemap"
-                className="text-slate-400 transition-colors hover:text-emerald-400"
+                href="/sitemap"
+                className="text-slate-400 transition-colors hover:text-primary"
               >
                 {t("legal.sitemap")}
               </a>

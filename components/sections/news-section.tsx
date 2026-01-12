@@ -78,7 +78,7 @@ export function NewsSection() {
           </div>
           <a
             href="#semua-berita"
-            className="group hidden items-center gap-2 font-semibold text-emerald-600 transition-colors hover:text-emerald-700 md:inline-flex"
+            className="group text-primary hover:text-primary-hover hidden items-center gap-2 font-semibold transition-colors md:inline-flex"
           >
             {t("viewAll")}
             <ArrowRight
@@ -107,7 +107,7 @@ export function NewsSection() {
         <div className="text-center md:hidden">
           <a
             href="#semua-berita"
-            className="group inline-flex items-center gap-2 font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+            className="group text-primary hover:text-primary-hover inline-flex items-center gap-2 font-semibold transition-colors"
           >
             {t("viewAllMobile")}
             <ArrowRight
@@ -134,9 +134,9 @@ function NewsCard({ article, tRead }: NewsCardProps) {
       className="group block overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
       {/* Image */}
-      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-emerald-100 to-blue-100">
+      <div className="from-primary-light relative h-64 overflow-hidden bg-gradient-to-br to-blue-100">
         {/* Placeholder gradient - replace with actual image when available */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-blue-500 opacity-60" />
+        <div className="from-primary absolute inset-0 bg-gradient-to-br to-blue-500 opacity-60" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white/80">
             <Calendar size={48} className="mx-auto mb-2" />
@@ -145,7 +145,7 @@ function NewsCard({ article, tRead }: NewsCardProps) {
         </div>
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-emerald-600 backdrop-blur-sm">
+          <span className="text-primary rounded-full bg-white/90 px-3 py-1 text-xs font-semibold backdrop-blur-sm">
             {article.category}
           </span>
         </div>
@@ -153,7 +153,7 @@ function NewsCard({ article, tRead }: NewsCardProps) {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="mb-3 line-clamp-2 text-xl font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+        <h3 className="group-hover:text-primary mb-3 line-clamp-2 text-xl font-bold text-slate-800 transition-colors">
           {article.title}
         </h3>
         <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-slate-600">
@@ -172,7 +172,7 @@ function NewsCard({ article, tRead }: NewsCardProps) {
               {article.readTime}
             </span>
           </div>
-          <span className="font-semibold text-emerald-600 opacity-0 transition-opacity group-hover:opacity-100">
+          <span className="text-primary font-semibold opacity-0 transition-opacity group-hover:opacity-100">
             {tRead} →
           </span>
         </div>
@@ -185,11 +185,11 @@ function NewsCardCompact({ article }: NewsCardProps) {
   return (
     <a
       href={`#berita/${article.id}`}
-      className="group flex gap-4 rounded-xl border border-slate-100 bg-white p-4 transition-all duration-300 hover:border-emerald-200 hover:shadow-lg"
+      className="group hover:border-primary/30 flex gap-4 rounded-xl border border-slate-100 bg-white p-4 transition-all duration-300 hover:shadow-lg"
     >
       {/* Thumbnail */}
-      <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-emerald-100 to-blue-100">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-blue-500 opacity-40" />
+      <div className="from-primary-light relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br to-blue-100">
+        <div className="from-primary absolute inset-0 bg-gradient-to-br to-blue-500 opacity-40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <Calendar size={24} className="text-white/60" />
         </div>
@@ -200,7 +200,7 @@ function NewsCardCompact({ article }: NewsCardProps) {
         <span className="mb-2 inline-block rounded bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600">
           {article.category}
         </span>
-        <h4 className="mb-2 line-clamp-2 font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+        <h4 className="group-hover:text-primary mb-2 line-clamp-2 font-bold text-slate-800 transition-colors">
           {article.title}
         </h4>
         <div className="flex items-center gap-3 text-xs text-slate-500">

@@ -7,7 +7,7 @@ export function AppDownloadSection() {
   const t = useTranslations("AppDownload");
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-blue-700 py-16 md:py-20">
+    <section className="from-primary via-primary-hover relative overflow-hidden bg-gradient-to-br to-blue-700 py-16 md:py-20">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 h-72 w-72 rounded-full bg-white blur-3xl" />
@@ -24,7 +24,7 @@ export function AppDownloadSection() {
             <h2 className="mb-4 text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
               {t("title")}
             </h2>
-            <p className="mb-8 text-lg leading-relaxed text-emerald-50 md:text-xl">
+            <p className="text-primary-lighter mb-8 text-lg leading-relaxed md:text-xl">
               {t("description")}
             </p>
 
@@ -95,7 +95,7 @@ export function AppDownloadSection() {
               </div>
               <div className="text-sm">
                 <p className="mb-1 font-semibold">{t("qrTitle")}</p>
-                <p className="text-emerald-100">{t("qrDesc")}</p>
+                <p className="text-primary-light">{t("qrDesc")}</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export function AppDownloadSection() {
 
               {/* Phone Frame */}
               <div className="relative rounded-[3rem] bg-white p-3 shadow-2xl">
-                <div className="overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-emerald-50 to-blue-50">
+                <div className="from-primary-lighter overflow-hidden rounded-[2.5rem] bg-gradient-to-br to-blue-50">
                   {/* Notch */}
                   <div className="mx-auto mb-4 h-6 w-40 rounded-b-3xl bg-white" />
 
@@ -129,7 +129,7 @@ export function AppDownloadSection() {
                     {/* App Header */}
                     <div className="mb-6 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600">
+                        <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-xl">
                           <span className="text-xl font-bold text-white">
                             N
                           </span>
@@ -141,7 +141,7 @@ export function AppDownloadSection() {
                           <p className="text-xs text-slate-500">Kab. Naiera</p>
                         </div>
                       </div>
-                      <Smartphone size={24} className="text-emerald-600" />
+                      <Smartphone size={24} className="text-primary" />
                     </div>
 
                     {/* Quick Services */}
@@ -158,7 +158,7 @@ export function AppDownloadSection() {
                           key={i}
                           className="rounded-xl bg-white p-3 text-center shadow-sm"
                         >
-                          <div className="mx-auto mb-2 h-10 w-10 rounded-lg bg-emerald-100" />
+                          <div className="bg-primary-light mx-auto mb-2 h-10 w-10 rounded-lg" />
                           <p className="text-xs font-medium text-slate-700">
                             {service}
                           </p>
@@ -167,7 +167,7 @@ export function AppDownloadSection() {
                     </div>
 
                     {/* Banner */}
-                    <div className="rounded-xl bg-gradient-to-r from-emerald-500 to-blue-500 p-4 text-white">
+                    <div className="from-primary rounded-xl bg-gradient-to-r to-blue-500 p-4 text-white">
                       <p className="text-sm font-semibold">
                         {t("banner.services")}
                       </p>
@@ -198,7 +198,7 @@ function FeatureItem({ icon: Icon, title, description }: FeatureItemProps) {
       </div>
       <div>
         <h4 className="mb-1 font-semibold">{title}</h4>
-        <p className="text-sm text-emerald-100">{description}</p>
+        <p className="text-primary-light text-sm">{description}</p>
       </div>
     </div>
   );

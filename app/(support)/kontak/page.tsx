@@ -102,7 +102,7 @@ export default function ContactPage() {
               </h2>
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <CheckCircle className="mb-4 h-16 w-16 text-emerald-500" />
+                  <CheckCircle className="mb-4 h-16 w-16 text-primary" />
                   <p className="text-lg font-medium text-slate-800">
                     {t("form.success")}
                   </p>

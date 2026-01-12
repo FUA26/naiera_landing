@@ -154,16 +154,16 @@ export function EventsSection() {
             {events[0] && (
               <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-lg">
                 {/* Featured Event Image */}
-                <div className="relative h-64 bg-gradient-to-br from-emerald-100 to-blue-100 md:h-80">
+                <div className="relative h-64 bg-gradient-to-br from-primary-light to-blue-100 md:h-80">
                   {/* Placeholder - replace with actual image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-blue-600 opacity-70" />
+                  <div className="from-primary absolute inset-0 bg-gradient-to-br to-blue-600 opacity-70" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Calendar size={64} className="text-white/60" />
                   </div>
 
                   {/* Event Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-lg">
+                    <span className="bg-primary text-primary-foreground rounded-lg px-4 py-2 text-sm font-semibold shadow-lg">
                       {events[0].category}
                     </span>
                   </div>
@@ -177,7 +177,7 @@ export function EventsSection() {
 
                   <div className="mb-6 space-y-3">
                     <div className="flex items-center gap-3 text-slate-600">
-                      <Calendar size={18} className="text-emerald-600" />
+                      <Calendar size={18} className="text-primary" />
                       <span className="font-medium">
                         {formatDate(events[0].dateStr)}
                       </span>
@@ -195,7 +195,7 @@ export function EventsSection() {
                   <div className="flex items-center justify-between border-t border-slate-100 pt-4">
                     <a
                       href={`/agenda/${events[0].id}`}
-                      className="group inline-flex items-center gap-2 font-semibold text-emerald-600 hover:text-emerald-700"
+                      className="group text-primary hover:text-primary-hover inline-flex items-center gap-2 font-semibold"
                     >
                       {t("viewMore")}
                       <ArrowRight
@@ -203,7 +203,7 @@ export function EventsSection() {
                         className="transition-transform group-hover:translate-x-1"
                       />
                     </a>
-                    <button className="rounded-lg bg-emerald-600 px-6 py-2 font-medium text-white transition-colors hover:bg-emerald-700">
+                    <button className="bg-primary text-primary-foreground hover:bg-primary-hover rounded-lg px-6 py-2 font-medium transition-colors">
                       {t("representative")}
                     </button>
                   </div>
@@ -221,11 +221,11 @@ export function EventsSection() {
                 <a
                   key={event.id}
                   href={`/agenda/${event.id}`}
-                  className="group flex gap-4 rounded-xl border border-slate-100 bg-white p-4 transition-all duration-300 hover:border-emerald-200 hover:shadow-lg"
+                  className="group hover:border-primary/30 flex gap-4 rounded-xl border border-slate-100 bg-white p-4 transition-all duration-300 hover:shadow-lg"
                 >
                   {/* Event Thumbnail */}
                   <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-slate-100 to-slate-200">
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/40 to-blue-500/40" />
+                    <div className="from-primary/40 absolute inset-0 bg-gradient-to-br to-blue-500/40" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Calendar size={32} className="text-slate-400" />
                     </div>
@@ -233,7 +233,7 @@ export function EventsSection() {
 
                   {/* Event Info */}
                   <div className="min-w-0 flex-1">
-                    <h5 className="mb-2 line-clamp-2 font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+                    <h5 className="group-hover:text-primary mb-2 line-clamp-2 font-bold text-slate-800 transition-colors">
                       {event.title}
                     </h5>
                     <div className="mb-2 flex items-center gap-2 text-sm text-slate-500">
@@ -261,7 +261,7 @@ export function EventsSection() {
               <div className="pt-4 text-center">
                 <a
                   href="#semua-agenda"
-                  className="group inline-flex items-center gap-2 font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+                  className="group text-primary hover:text-primary-hover inline-flex items-center gap-2 font-semibold transition-colors"
                 >
                   {t("viewOthers")}
                   <ArrowRight
@@ -343,9 +343,9 @@ export function EventsSection() {
                         key={day}
                         className={`flex aspect-square items-center justify-center rounded-lg text-sm transition-all duration-200 ${
                           isToday
-                            ? "bg-emerald-600 font-bold text-white"
+                            ? "bg-primary text-primary-foreground font-bold"
                             : hasEvent
-                              ? "bg-emerald-50 font-semibold text-emerald-600 hover:bg-emerald-100"
+                              ? "bg-primary-lighter text-primary hover:bg-primary-light font-semibold"
                               : "text-slate-700 hover:bg-slate-50"
                         }`}
                       >
@@ -359,11 +359,11 @@ export function EventsSection() {
               {/* Calendar Legend */}
               <div className="space-y-2 border-t border-slate-100 pt-4">
                 <div className="flex items-center gap-2 text-sm">
-                  <div className="h-4 w-4 rounded bg-emerald-600" />
+                  <div className="bg-primary h-4 w-4 rounded" />
                   <span className="text-slate-600">{t("calToday")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <div className="h-4 w-4 rounded border border-emerald-200 bg-emerald-50" />
+                  <div className="border-primary/30 bg-primary-lighter h-4 w-4 rounded border" />
                   <span className="text-slate-600">{t("calHasEvent")}</span>
                 </div>
               </div>
@@ -378,7 +378,7 @@ export function EventsSection() {
               {/* View Full Calendar */}
               <a
                 href="#kalender-lengkap"
-                className="mt-4 block text-center text-sm font-semibold text-emerald-600 hover:text-emerald-700"
+                className="text-primary hover:text-primary-hover mt-4 block text-center text-sm font-semibold"
               >
                 {t("viewOthers")} →
               </a>

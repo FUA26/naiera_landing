@@ -14,11 +14,15 @@ export function Header() {
 
   // Mobile menu items (simplified version of mega menu)
   const navItems = [
-    { label: t("home"), href: "#beranda", active: true },
-    { label: t("services"), href: "#layanan", active: false },
-    { label: t("about"), href: "#tentang", active: false },
-    { label: t("news"), href: "#berita", active: false },
-    { label: t("contact"), href: "#kontak", active: false },
+    { label: t("home"), href: "/", active: true },
+    { label: t("services"), href: "/layanan", active: false },
+    { label: t("about"), href: "/pemerintahan/profil", active: false },
+    {
+      label: t("news"),
+      href: "/informasi-publik/berita-terkini",
+      active: false,
+    },
+    { label: t("contact"), href: "/kontak", active: false },
   ];
 
   return (
@@ -54,7 +58,7 @@ export function Header() {
             <LanguageSwitcher />
             <Link
               href="/login"
-              className="hidden items-center justify-center rounded-lg bg-emerald-600 px-6 py-2 font-medium text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:bg-emerald-700 sm:inline-flex"
+              className="bg-primary text-primary-foreground shadow-primary/30 hover:bg-primary-hover hidden items-center justify-center rounded-lg px-6 py-2 font-medium shadow-lg transition-all duration-300 sm:inline-flex"
             >
               {t("login")}
             </Link>
@@ -62,7 +66,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-600 transition-colors hover:text-emerald-600 md:hidden"
+              className="hover:text-primary p-2 text-slate-600 transition-colors md:hidden"
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -91,7 +95,7 @@ export function Header() {
                 </span>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-slate-600 transition-colors hover:text-emerald-600"
+                  className="hover:text-primary p-2 text-slate-600 transition-colors"
                   aria-label="Close menu"
                 >
                   <X size={24} />
@@ -107,8 +111,8 @@ export function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block border-b border-slate-100 px-6 py-4 font-medium transition-colors ${
                       item.active
-                        ? "bg-emerald-50 text-emerald-600"
-                        : "text-slate-600 hover:bg-slate-50 hover:text-emerald-600"
+                        ? "bg-primary-lighter text-primary"
+                        : "hover:text-primary text-slate-600 hover:bg-slate-50"
                     }`}
                   >
                     {item.label}
@@ -120,7 +124,7 @@ export function Header() {
               <div className="border-t border-slate-200 p-6">
                 <Link
                   href="/login"
-                  className="block w-full rounded-lg bg-emerald-600 px-6 py-3 text-center font-medium text-white shadow-lg shadow-emerald-500/30 transition-all hover:bg-emerald-700"
+                  className="bg-primary text-primary-foreground shadow-primary/30 hover:bg-primary-hover block w-full rounded-lg px-6 py-3 text-center font-medium shadow-lg transition-all"
                 >
                   {t("login")}
                 </Link>

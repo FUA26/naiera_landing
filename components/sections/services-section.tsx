@@ -90,14 +90,14 @@ export function ServicesSection() {
     {
       name: t("categories.population"),
       icon: Users,
-      color: "emerald",
-      bgColor: "bg-emerald-50",
+      color: "primary",
+      bgColor: "bg-primary-lighter",
       services: [
         {
           icon: IdCard,
           name: t("items.ektp.name"),
           description: t("items.ektp.desc"),
-          href: "#e-ktp",
+          href: "/layanan/e-ktp",
           badge: t("badges.popular"),
           stats: "5.2k", // Simplified for demo
           category: t("categories.population"),
@@ -106,7 +106,7 @@ export function ServicesSection() {
           icon: FileText,
           name: t("items.kk.name"),
           description: t("items.kk.desc"),
-          href: "#kk",
+          href: "/layanan/kk",
           stats: "3.8k",
           category: t("categories.population"),
         },
@@ -114,7 +114,7 @@ export function ServicesSection() {
           icon: FileCheck,
           name: t("items.akta.name"),
           description: t("items.akta.desc"),
-          href: "#akta",
+          href: "/layanan/akta-kelahiran",
           stats: "2.1k",
           category: t("categories.population"),
         },
@@ -122,7 +122,7 @@ export function ServicesSection() {
           icon: Home,
           name: t("items.pindah.name"),
           description: t("items.pindah.desc"),
-          href: "#pindah",
+          href: "/layanan/pindah-domisili",
           stats: "890",
           category: t("categories.population"),
         },
@@ -138,7 +138,7 @@ export function ServicesSection() {
           icon: Heart,
           name: t("items.bpjs.name"),
           description: t("items.bpjs.desc"),
-          href: "#bpjs",
+          href: "/layanan/bpjs-kesehatan",
           badge: t("badges.popular"),
           stats: "8.5k",
           category: t("categories.health"),
@@ -147,7 +147,7 @@ export function ServicesSection() {
           icon: Building2,
           name: t("items.puskesmas.name"),
           description: t("items.puskesmas.desc"),
-          href: "#puskesmas",
+          href: "/layanan/puskesmas",
           stats: "4.2k",
           category: t("categories.health"),
         },
@@ -155,7 +155,7 @@ export function ServicesSection() {
           icon: Users,
           name: t("items.posyandu.name"),
           description: t("items.posyandu.desc"),
-          href: "#posyandu",
+          href: "/layanan/posyandu",
           stats: "2.3k",
           category: t("categories.health"),
         },
@@ -171,7 +171,7 @@ export function ServicesSection() {
           icon: GraduationCap,
           name: t("items.ppdb.name"),
           description: t("items.ppdb.desc"),
-          href: "#ppdb",
+          href: "/layanan/ppdb",
           badge: t("badges.new"),
           stats: "3.7k",
           category: t("categories.education"),
@@ -180,7 +180,7 @@ export function ServicesSection() {
           icon: Award,
           name: t("items.beasiswa.name"),
           description: t("items.beasiswa.desc"),
-          href: "#beasiswa",
+          href: "/layanan/beasiswa",
           stats: "1.5k",
           category: t("categories.education"),
         },
@@ -188,7 +188,7 @@ export function ServicesSection() {
           icon: FileText,
           name: t("items.suratSekolah.name"),
           description: t("items.suratSekolah.desc"),
-          href: "#surat-sekolah",
+          href: "/layanan/surat-keterangan-sekolah",
           stats: "2.8k",
           category: t("categories.education"),
         },
@@ -204,7 +204,7 @@ export function ServicesSection() {
           icon: FileCheck,
           name: t("items.izinUsaha.name"),
           description: t("items.izinUsaha.desc"),
-          href: "#izin-usaha",
+          href: "/layanan/izin-usaha",
           stats: "1.9k",
           category: t("categories.economy"),
         },
@@ -212,7 +212,7 @@ export function ServicesSection() {
           icon: CreditCard,
           name: t("items.pajak.name"),
           description: t("items.pajak.desc"),
-          href: "#pajak",
+          href: "/layanan/pajak-daerah",
           badge: t("badges.new"),
           stats: "4.5k",
           category: t("categories.economy"),
@@ -221,7 +221,7 @@ export function ServicesSection() {
           icon: Factory,
           name: t("items.modal.name"),
           description: t("items.modal.desc"),
-          href: "#modal-umkm",
+          href: "/layanan/modal-umkm",
           stats: "680",
           category: t("categories.economy"),
         },
@@ -237,7 +237,7 @@ export function ServicesSection() {
           icon: FileSearch,
           name: t("items.kartuKuning.name"),
           description: t("items.kartuKuning.desc"),
-          href: "#kartu-kuning",
+          href: "/layanan/kartu-kuning",
           stats: "2.4k",
           category: t("categories.manpower"),
         },
@@ -245,7 +245,7 @@ export function ServicesSection() {
           icon: Building,
           name: t("items.jobFair.name"),
           description: t("items.jobFair.desc"),
-          href: "#job-fair",
+          href: "/layanan/job-fair",
           badge: t("badges.popular"),
           stats: "1.8k",
           category: t("categories.manpower"),
@@ -254,7 +254,7 @@ export function ServicesSection() {
           icon: Award,
           name: t("items.pelatihan.name"),
           description: t("items.pelatihan.desc"),
-          href: "#pelatihan",
+          href: "/layanan/pelatihan-kerja",
           stats: "950",
           category: t("categories.manpower"),
         },
@@ -270,7 +270,7 @@ export function ServicesSection() {
           icon: MapPin,
           name: t("items.wisata.name"),
           description: t("items.wisata.desc"),
-          href: "#wisata",
+          href: "/layanan/info-wisata",
           stats: "15k",
           category: t("categories.tourism"),
         },
@@ -278,7 +278,7 @@ export function ServicesSection() {
           icon: Award,
           name: t("items.izinEvent.name"),
           description: t("items.izinEvent.desc"),
-          href: "#izin-event",
+          href: "/layanan/izin-event",
           stats: "120",
           category: t("categories.tourism"),
         },
@@ -294,7 +294,7 @@ export function ServicesSection() {
           icon: Building,
           name: t("items.imb.name"),
           description: t("items.imb.desc"),
-          href: "#imb",
+          href: "/layanan/imb",
           stats: "780",
           category: t("categories.infrastructure"),
         },
@@ -302,7 +302,7 @@ export function ServicesSection() {
           icon: MessageCircle,
           name: t("items.aduanInfra.name"),
           description: t("items.aduanInfra.desc"),
-          href: "#aduan-infra",
+          href: "/layanan/aduan-infrastruktur",
           badge: t("badges.popular"),
           stats: "1.2k",
           category: t("categories.infrastructure"),
@@ -311,7 +311,7 @@ export function ServicesSection() {
           icon: Bus,
           name: t("items.transportasi.name"),
           description: t("items.transportasi.desc"),
-          href: "#transportasi",
+          href: "/layanan/transportasi-umum",
           stats: "5.6k",
           category: t("categories.infrastructure"),
         },
@@ -327,7 +327,7 @@ export function ServicesSection() {
           icon: Users,
           name: t("items.bansos.name"),
           description: t("items.bansos.desc"),
-          href: "#bansos",
+          href: "/layanan/bansos",
           stats: "3.5k",
           category: t("categories.social"),
         },
@@ -335,7 +335,7 @@ export function ServicesSection() {
           icon: Home,
           name: t("items.dtks.name"),
           description: t("items.dtks.desc"),
-          href: "#dtks",
+          href: "/layanan/dtks",
           stats: "2.8k",
           category: t("categories.social"),
         },
@@ -351,7 +351,7 @@ export function ServicesSection() {
           icon: Sprout,
           name: t("items.bankSampah.name"),
           description: t("items.bankSampah.desc"),
-          href: "#bank-sampah",
+          href: "/layanan/bank-sampah",
           stats: "890",
           category: t("categories.environment"),
         },
@@ -359,7 +359,7 @@ export function ServicesSection() {
           icon: MessageCircle,
           name: t("items.aduanLingkungan.name"),
           description: t("items.aduanLingkungan.desc"),
-          href: "#aduan-lingkungan",
+          href: "/layanan/aduan-lingkungan",
           stats: "450",
           category: t("categories.environment"),
         },
@@ -375,7 +375,7 @@ export function ServicesSection() {
           icon: FileText,
           name: t("items.suratRt.name"),
           description: t("items.suratRt.desc"),
-          href: "#surat-rt",
+          href: "/layanan/surat-rt-rw",
           stats: "4.2k",
           category: t("categories.government"),
         },
@@ -383,7 +383,7 @@ export function ServicesSection() {
           icon: Building,
           name: t("items.danaDesa.name"),
           description: t("items.danaDesa.desc"),
-          href: "#dana-desa",
+          href: "/layanan/dana-desa",
           stats: "120",
           category: t("categories.government"),
         },
@@ -399,7 +399,7 @@ export function ServicesSection() {
           icon: FileSearch,
           name: t("items.infoPublik.name"),
           description: t("items.infoPublik.desc"),
-          href: "#ppid",
+          href: "/layanan/ppid",
           stats: "320",
           category: t("categories.ppid"),
         },
@@ -407,7 +407,7 @@ export function ServicesSection() {
           icon: FileText,
           name: t("items.dokumen.name"),
           description: t("items.dokumen.desc"),
-          href: "#dokumen-publik",
+          href: "/layanan/dokumen-publik",
           stats: "1.5k",
           category: t("categories.ppid"),
         },
@@ -423,7 +423,7 @@ export function ServicesSection() {
           icon: ShieldAlert,
           name: t("items.darurat.name"),
           description: t("items.darurat.desc"),
-          href: "#darurat",
+          href: "/layanan/darurat",
           badge: t("badges.important"), // Using important badge
           stats: "24/7",
           category: t("categories.disaster"),
@@ -432,7 +432,7 @@ export function ServicesSection() {
           icon: Cloud,
           name: t("items.infoBencana.name"),
           description: t("items.infoBencana.desc"),
-          href: "#info-bencana",
+          href: "/layanan/info-bencana",
           stats: "Real-time",
           category: t("categories.disaster"),
         },
@@ -448,7 +448,7 @@ export function ServicesSection() {
           icon: FileCheck,
           name: t("items.layananTerpadu.name"),
           description: t("items.layananTerpadu.desc"),
-          href: "#layanan-terpadu",
+          href: "/layanan/layanan-terpadu",
           stats: "2.1k",
           category: t("categories.multisector"),
         },
@@ -456,7 +456,7 @@ export function ServicesSection() {
           icon: MessageCircle,
           name: t("items.pengaduan.name"),
           description: t("items.pengaduan.desc"),
-          href: "#pengaduan",
+          href: "/layanan/pengaduan-masyarakat",
           badge: t("badges.popular"),
           stats: "3.4k",
           category: t("categories.multisector"),
@@ -482,7 +482,7 @@ export function ServicesSection() {
       <div className="container mx-auto max-w-7xl px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <span className="mb-4 inline-block rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+          <span className="bg-primary-light text-primary mb-4 inline-block rounded-full px-4 py-2 text-sm font-semibold">
             {t("label")}
           </span>
           <h2 className="mb-3 text-3xl font-bold text-slate-800 md:text-4xl">
@@ -500,8 +500,8 @@ export function ServicesSection() {
               onClick={() => setSelectedCategory(null)}
               className={`rounded-full px-5 py-2.5 font-medium transition-all duration-300 ${
                 selectedCategory === null
-                  ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/30"
-                  : "border border-slate-200 bg-white text-slate-700 hover:border-emerald-200 hover:text-emerald-600"
+                  ? "bg-primary text-primary-foreground shadow-primary/30 shadow-lg"
+                  : "hover:border-primary/30 hover:text-primary border border-slate-200 bg-white text-slate-700"
               }`}
             >
               {t("allServices")}
@@ -514,8 +514,8 @@ export function ServicesSection() {
                   onClick={() => setSelectedCategory(category.name)}
                   className={`inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.name
-                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/30"
-                      : "border border-slate-200 bg-white text-slate-700 hover:border-emerald-200 hover:text-emerald-600"
+                      ? "bg-primary text-primary-foreground shadow-primary/30 shadow-lg"
+                      : "hover:border-primary/30 hover:text-primary border border-slate-200 bg-white text-slate-700"
                   }`}
                 >
                   <CategoryIcon size={16} />
@@ -533,7 +533,7 @@ export function ServicesSection() {
             <div className="text-center">
               <button
                 onClick={() => setShowAllCategories(!showAllCategories)}
-                className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+                className="text-primary hover:text-primary-hover inline-flex items-center gap-1 text-sm font-semibold transition-colors"
               >
                 {showAllCategories ? t("showLess") : t("showAll")}
                 <ArrowRight
@@ -571,7 +571,7 @@ export function ServicesSection() {
               number="100+"
               label={t("stats.services")}
               icon={Building2}
-              color="emerald"
+              color="primary"
             />
             <StatCard
               number="50K+"
@@ -598,7 +598,7 @@ export function ServicesSection() {
         <div className="mt-10 text-center">
           <a
             href="#semua-layanan"
-            className="group inline-flex items-center gap-2 font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+            className="group text-primary hover:text-primary-hover inline-flex items-center gap-2 font-semibold transition-colors"
           >
             {t("explore")}
             <ArrowRight
@@ -624,12 +624,12 @@ function ServiceCard({ service, index, tAccess }: ServiceCardProps) {
   return (
     <a
       href={service.href}
-      className="group animate-fade-in-up relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl"
+      className="group animate-fade-in-up hover:border-primary/30 relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
       style={{ animationDelay: `${index * 50}ms` }}
       aria-label={`Layanan ${service.name} - ${service.description}`}
     >
       {/* Decorative gradient background */}
-      <div className="absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 rounded-full bg-gradient-to-br from-emerald-50 to-transparent opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="from-primary-lighter absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 rounded-full bg-gradient-to-br to-transparent opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
       {/* Badge */}
       {service.badge && (
@@ -640,7 +640,7 @@ function ServiceCard({ service, index, tAccess }: ServiceCardProps) {
                 ? "border border-amber-200 bg-amber-100 text-amber-700"
                 : service.badge === "Penting" || service.badge === "Important"
                   ? "border border-red-200 bg-red-100 text-red-700"
-                  : "border border-emerald-200 bg-emerald-100 text-emerald-700"
+                  : "border-primary/30 bg-primary-lighter text-primary border"
             }`}
           >
             {service.badge}
@@ -651,12 +651,12 @@ function ServiceCard({ service, index, tAccess }: ServiceCardProps) {
       {/* Content */}
       <div className="relative">
         {/* Icon */}
-        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:bg-emerald-600 group-hover:text-white">
+        <div className="bg-primary-lighter text-primary group-hover:bg-primary group-hover:text-primary-foreground mb-4 flex h-14 w-14 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
           <Icon size={28} strokeWidth={2} />
         </div>
 
         {/* Service Name */}
-        <h3 className="mb-2 text-lg font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+        <h3 className="group-hover:text-primary mb-2 text-lg font-bold text-slate-800 transition-colors">
           {service.name}
         </h3>
 
@@ -670,7 +670,7 @@ function ServiceCard({ service, index, tAccess }: ServiceCardProps) {
           <span className="text-xs font-medium text-slate-500">
             {service.stats}
           </span>
-          <div className="flex items-center gap-1 text-sm font-semibold text-emerald-600 opacity-0 transition-opacity group-hover:opacity-100">
+          <div className="text-primary flex items-center gap-1 text-sm font-semibold opacity-0 transition-opacity group-hover:opacity-100">
             {tAccess}
             <ArrowRight
               size={16}
@@ -692,14 +692,14 @@ interface StatCardProps {
 
 function StatCard({ number, label, icon: Icon, color }: StatCardProps) {
   const colorClasses = {
-    emerald: "text-emerald-600 bg-emerald-50",
+    primary: "text-primary bg-primary-lighter",
     blue: "text-blue-600 bg-blue-50",
     purple: "text-purple-600 bg-purple-50",
     amber: "text-amber-600 bg-amber-50",
   };
 
   const selectedColor =
-    colorClasses[color as keyof typeof colorClasses] || colorClasses.emerald;
+    colorClasses[color as keyof typeof colorClasses] || colorClasses.primary;
 
   return (
     <div className="text-center">

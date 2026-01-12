@@ -67,9 +67,9 @@ const statusConfig: Record<
   done: {
     label: "Done",
     icon: IconCircleCheck,
-    bgColor: "bg-emerald-50 dark:bg-emerald-950",
-    textColor: "text-emerald-700 dark:text-emerald-300",
-    iconColor: "text-emerald-500",
+    bgColor: "bg-primary-lighter dark:bg-emerald-950",
+    textColor: "text-primary-hover dark:text-emerald-300",
+    iconColor: "text-primary",
   },
   canceled: {
     label: "Canceled",
@@ -442,10 +442,10 @@ export function ViewTaskSheet({
                   </div>
 
                   {/* Estimated Progress */}
-                  <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 p-4 ring-1 ring-emerald-500/10">
-                    <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-emerald-500/10 blur-2xl" />
+                  <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-emerald-600/5 p-4 ring-1 ring-emerald-500/10">
+                    <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-primary/10 blur-2xl" />
                     <div className="relative">
-                      <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+                      <p className="text-3xl font-bold text-primary dark:text-primary">
                         {task.estimatedHours}
                       </p>
                       <p className="text-muted-foreground mt-1 text-xs font-medium">

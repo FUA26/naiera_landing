@@ -36,7 +36,7 @@ export default function LoginPage() {
               href="/"
               className="group mb-6 inline-flex items-center gap-3"
             >
-              <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-lg ring-1 shadow-emerald-500/5 ring-slate-200">
+              <div className="shadow-primary/5 relative flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-lg ring-1 ring-slate-200">
                 <Image
                   src="/naiera.png"
                   alt="Naiera Logo"
@@ -45,7 +45,7 @@ export default function LoginPage() {
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+                <h1 className="group-hover:text-primary text-lg font-bold text-slate-800 transition-colors">
                   Super App Naiera
                 </h1>
                 <p className="text-xs text-slate-500">Kabupaten Naiera</p>
@@ -81,7 +81,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Masukkan email atau NIK"
-                  className="w-full rounded-lg border border-slate-300 bg-white py-3 pr-4 pl-11 text-sm transition-all placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none"
+                  className="focus:border-primary focus:ring-primary/20 w-full rounded-lg border border-slate-300 bg-white py-3 pr-4 pl-11 text-sm transition-all placeholder:text-slate-400 focus:ring-2 focus:outline-none"
                   required
                 />
               </div>
@@ -106,7 +106,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Masukkan password"
-                  className="w-full rounded-lg border border-slate-300 bg-white py-3 pr-12 pl-11 text-sm transition-all placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none"
+                  className="focus:border-primary focus:ring-primary/20 w-full rounded-lg border border-slate-300 bg-white py-3 pr-12 pl-11 text-sm transition-all placeholder:text-slate-400 focus:ring-2 focus:outline-none"
                   required
                 />
                 <button
@@ -127,7 +127,7 @@ export default function LoginPage() {
                     type="checkbox"
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
-                    className="peer h-4 w-4 cursor-pointer appearance-none rounded border border-slate-300 bg-white transition-colors checked:border-emerald-600 checked:bg-emerald-600 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none"
+                    className="peer checked:border-primary checked:bg-primary focus:ring-primary/20 h-4 w-4 cursor-pointer appearance-none rounded border border-slate-300 bg-white transition-colors focus:ring-2 focus:outline-none"
                   />
                   <Check
                     size={12}
@@ -138,7 +138,7 @@ export default function LoginPage() {
               </label>
               <Link
                 href="/forgot-password"
-                className="text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700"
+                className="text-primary hover:text-primary-hover text-sm font-medium transition-colors"
               >
                 Lupa password?
               </Link>
@@ -147,7 +147,7 @@ export default function LoginPage() {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="h-12 w-full rounded-lg bg-emerald-600 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:bg-emerald-700 hover:shadow-emerald-500/40"
+              className="bg-primary hover:bg-primary-hover h-12 w-full rounded-lg text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:shadow-emerald-500/40"
             >
               Masuk
             </Button>
@@ -219,7 +219,7 @@ export default function LoginPage() {
             Belum punya akun?{" "}
             <Link
               href="/register"
-              className="group inline-flex items-center gap-1 font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+              className="group text-primary hover:text-primary-hover inline-flex items-center gap-1 font-semibold transition-colors"
             >
               Daftar sekarang
               <ArrowRight
@@ -232,7 +232,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right Side - Info Panel */}
-      <div className="relative hidden items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 p-12 lg:flex lg:flex-1">
+      <div className="from-primary relative hidden items-center justify-center overflow-hidden bg-gradient-to-br via-teal-600 to-cyan-700 p-12 lg:flex lg:flex-1">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-white/10 blur-3xl" />

@@ -55,7 +55,7 @@ const statusOptions = [
     value: "done",
     label: "Done",
     icon: IconCircleCheck,
-    color: "text-emerald-500",
+    color: "text-primary",
   },
   {
     value: "canceled",

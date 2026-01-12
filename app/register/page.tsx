@@ -160,7 +160,7 @@ export default function RegisterPage() {
   const getPasswordStrengthColor = () => {
     if (passwordStrength < 40) return "bg-red-500";
     if (passwordStrength < 70) return "bg-amber-500";
-    return "bg-emerald-500";
+    return "bg-primary";
   };
 
   const getPasswordStrengthLabel = () => {
@@ -210,7 +210,7 @@ export default function RegisterPage() {
   return (
     <div className="flex min-h-screen">
       {/* Left Side - Image/Info */}
-      <div className="relative hidden items-center justify-center overflow-hidden bg-linear-to-br from-emerald-600 via-emerald-700 to-blue-700 p-12 lg:flex lg:flex-1">
+      <div className="relative hidden items-center justify-center overflow-hidden bg-linear-to-br from-primary via-emerald-700 to-blue-700 p-12 lg:flex lg:flex-1">
         {/* Decorative Background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 h-96 w-96 rounded-full bg-white blur-3xl" />
@@ -221,7 +221,7 @@ export default function RegisterPage() {
           <h2 className="mb-6 text-4xl font-bold">
             Bergabung dengan Super App Naiera
           </h2>
-          <p className="mb-8 text-xl leading-relaxed text-emerald-50">
+          <p className="mb-8 text-xl leading-relaxed text-primary-lighter">
             Daftar sekarang dan nikmati kemudahan akses ke semua layanan
             pemerintahan dalam satu aplikasi.
           </p>
@@ -246,9 +246,9 @@ export default function RegisterPage() {
                 <div
                   className={`flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold ${
                     currentStep > item.step
-                      ? "bg-white text-emerald-600"
+                      ? "bg-white text-primary"
                       : currentStep === item.step
-                        ? "bg-emerald-400 text-white"
+                        ? "bg-primary text-white"
                         : "bg-white/20 text-white"
                   }`}
                 >
@@ -256,7 +256,7 @@ export default function RegisterPage() {
                 </div>
                 <div>
                   <p className="text-lg font-semibold">{item.title}</p>
-                  <p className="text-sm text-emerald-100">{item.desc}</p>
+                  <p className="text-sm text-primary-light">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -265,11 +265,11 @@ export default function RegisterPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
               <p className="mb-1 text-2xl font-bold">50K+</p>
-              <p className="text-sm text-emerald-100">Pengguna Aktif</p>
+              <p className="text-sm text-primary-light">Pengguna Aktif</p>
             </div>
             <div className="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
               <p className="mb-1 text-2xl font-bold">4.8/5</p>
-              <p className="text-sm text-emerald-100">Rating Kepuasan</p>
+              <p className="text-sm text-primary-light">Rating Kepuasan</p>
             </div>
           </div>
         </div>
@@ -293,7 +293,7 @@ export default function RegisterPage() {
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+                <h1 className="text-xl font-bold text-slate-800 transition-colors group-hover:text-primary">
                   Super App Naiera
                 </h1>
                 <p className="text-sm text-slate-500">Kabupaten Naiera</p>
@@ -320,7 +320,7 @@ export default function RegisterPage() {
                 <div
                   key={step}
                   className={`h-2 flex-1 rounded-full transition-all duration-300 ${
-                    step <= currentStep ? "bg-emerald-600" : "bg-slate-200"
+                    step <= currentStep ? "bg-primary" : "bg-slate-200"
                   }`}
                 />
               ))}
@@ -665,7 +665,7 @@ export default function RegisterPage() {
                                     ? "text-red-500"
                                     : passwordStrength < 70
                                       ? "text-amber-500"
-                                      : "text-emerald-500"
+                                      : "text-primary"
                                 }`}
                               >
                                 {getPasswordStrengthLabel()}
@@ -695,13 +695,13 @@ export default function RegisterPage() {
                         <div
                           key={index}
                           className={`flex items-center gap-2 transition-all duration-200 ${
-                            isMet ? "text-emerald-600" : "text-slate-500"
+                            isMet ? "text-primary" : "text-slate-500"
                           }`}
                         >
                           <div
                             className={`flex h-5 w-5 items-center justify-center rounded-full transition-all duration-200 ${
                               isMet
-                                ? "bg-emerald-500 text-white"
+                                ? "bg-primary text-white"
                                 : "bg-slate-200"
                             }`}
                           >
@@ -754,7 +754,7 @@ export default function RegisterPage() {
                           </div>
                         </FormControl>
                         {confirmPassword && password === confirmPassword && (
-                          <p className="mt-1 flex items-center gap-1 text-xs text-emerald-500">
+                          <p className="mt-1 flex items-center gap-1 text-xs text-primary">
                             <Check size={14} />
                             Password cocok
                           </p>
@@ -769,21 +769,21 @@ export default function RegisterPage() {
                     <input
                       type="checkbox"
                       id="terms"
-                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary"
                       required
                     />
                     <label htmlFor="terms" className="text-sm text-slate-600">
                       Saya menyetujui{" "}
                       <Link
                         href="/terms"
-                        className="font-medium text-emerald-600 hover:text-emerald-700"
+                        className="font-medium text-primary hover:text-primary-hover"
                       >
                         Syarat & Ketentuan
                       </Link>{" "}
                       dan{" "}
                       <Link
                         href="/privacy"
-                        className="font-medium text-emerald-600 hover:text-emerald-700"
+                        className="font-medium text-primary hover:text-primary-hover"
                       >
                         Kebijakan Privasi
                       </Link>
@@ -810,7 +810,7 @@ export default function RegisterPage() {
                   <Button
                     type="button"
                     onClick={handleNext}
-                    className="flex-1 bg-emerald-600 py-3 text-white shadow-lg transition-all duration-300 hover:bg-emerald-700"
+                    className="flex-1 bg-primary py-3 text-white shadow-lg transition-all duration-300 hover:bg-primary-hover"
                   >
                     Selanjutnya
                     <ArrowRight size={20} className="ml-2" />
@@ -818,7 +818,7 @@ export default function RegisterPage() {
                 ) : (
                   <Button
                     type="submit"
-                    className="flex-1 bg-emerald-600 py-3 text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:bg-emerald-700"
+                    className="flex-1 bg-primary py-3 text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:bg-primary-hover"
                   >
                     Daftar Sekarang
                   </Button>
@@ -832,7 +832,7 @@ export default function RegisterPage() {
             Sudah punya akun?{" "}
             <Link
               href="/login"
-              className="group inline-flex items-center gap-1 font-semibold text-emerald-600 hover:text-emerald-700"
+              className="group inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-hover"
             >
               Masuk di sini
               <ArrowRight

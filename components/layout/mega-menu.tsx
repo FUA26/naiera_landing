@@ -31,6 +31,8 @@ import {
   Tent,
   Building,
   Contact,
+  FileSearch,
+  BookOpen,
 } from "lucide-react";
 
 export function MegaMenu() {
@@ -44,7 +46,7 @@ export function MegaMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
-              href="#beranda"
+              href="/"
               className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
             >
               {tNav("home")}
@@ -62,8 +64,8 @@ export function MegaMenu() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b from-emerald-600/50 to-emerald-600 p-6 no-underline outline-none select-none focus:shadow-md"
-                    href="#layanan"
+                    className="from-primary/50 to-primary flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none select-none focus:shadow-md"
+                    href="/layanan"
                   >
                     <Building2 className="h-6 w-6 text-white" />
                     <div className="mt-4 mb-2 text-lg font-medium text-white">
@@ -76,42 +78,42 @@ export function MegaMenu() {
                 </NavigationMenuLink>
               </li>
               <ListItem
-                href="#"
+                href="/layanan/e-ktp"
                 title={t("services.items.population.title")}
                 icon={Users}
               >
                 {t("services.items.population.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/layanan/bpjs-kesehatan"
                 title={t("services.items.health.title")}
                 icon={Stethoscope}
               >
                 {t("services.items.health.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/layanan/ppdb"
                 title={t("services.items.education.title")}
                 icon={GraduationCap}
               >
                 {t("services.items.education.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/layanan/pajak-daerah"
                 title={t("services.items.tax.title")}
                 icon={Receipt}
               >
                 {t("services.items.tax.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/layanan/izin-usaha"
                 title={t("services.items.business.title")}
                 icon={Building2}
               >
                 {t("services.items.business.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/layanan/bansos"
                 title={t("services.items.social.title")}
                 icon={HeartHandshake}
               >
@@ -129,46 +131,60 @@ export function MegaMenu() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               <ListItem
-                href="#"
+                href="/informasi-publik/berita-terkini"
                 title={t("information.items.news.title")}
                 icon={Newspaper}
               >
                 {t("information.items.news.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/informasi-publik/agenda-kegiatan"
                 title={t("information.items.agenda.title")}
                 icon={Calendar}
               >
                 {t("information.items.agenda.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/informasi-publik/apbd"
                 title={t("information.items.transparency.title")}
                 icon={FileText}
               >
                 {t("information.items.transparency.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/informasi-publik/peraturan-daerah"
                 title={t("information.items.regulations.title")}
                 icon={Scale}
               >
                 {t("information.items.regulations.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/informasi-publik/destinasi-wisata"
                 title={t("information.items.tourism.title")}
                 icon={Map}
               >
                 {t("information.items.tourism.desc")}
               </ListItem>
               <ListItem
-                href="#"
+                href="/informasi-publik/galeri-foto"
                 title={t("information.items.gallery.title")}
                 icon={ImageIcon}
               >
                 {t("information.items.gallery.desc")}
+              </ListItem>
+              <ListItem
+                href="/informasi-publik/ppid"
+                title="PPID"
+                icon={FileSearch}
+              >
+                Layanan keterbukaan informasi publik
+              </ListItem>
+              <ListItem
+                href="/informasi-publik/publikasi"
+                title="Publikasi"
+                icon={BookOpen}
+              >
+                Dokumen dan publikasi resmi daerah
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -247,7 +263,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="flex items-center gap-2 text-sm leading-none font-medium">
-            {Icon && <Icon className="h-4 w-4 text-emerald-600" />}
+            {Icon && <Icon className="text-primary h-4 w-4" />}
             {title}
           </div>
           <p className="text-muted-foreground mt-1.5 line-clamp-2 text-sm leading-snug">

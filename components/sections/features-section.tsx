@@ -41,7 +41,7 @@ export function FeaturesSection() {
       <div className="container mx-auto max-w-7xl px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <span className="mb-4 inline-block rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+          <span className="bg-primary-light text-primary mb-4 inline-block rounded-full px-4 py-2 text-sm font-semibold">
             {t("label")}
           </span>
           <h2 className="mb-4 text-3xl font-bold text-slate-800 md:text-4xl">
@@ -62,7 +62,7 @@ export function FeaturesSection() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col items-center gap-4 sm:flex-row">
-            <button className="rounded-lg bg-emerald-600 px-8 py-3 font-semibold text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:scale-105 hover:bg-emerald-700">
+            <button className="bg-primary text-primary-foreground shadow-primary/30 hover:bg-primary-hover rounded-lg px-8 py-3 font-semibold shadow-lg transition-all duration-300 hover:scale-105">
               {t("ctaStart")}
             </button>
             <button className="rounded-lg border-2 border-slate-300 bg-white px-8 py-3 font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50">
@@ -85,16 +85,16 @@ function FeatureCard({ feature, index }: FeatureCardProps) {
 
   return (
     <div
-      className="group animate-fade-in-up rounded-2xl border border-slate-100 p-6 transition-all duration-300 hover:border-emerald-200 hover:shadow-xl"
+      className="group animate-fade-in-up hover:border-primary/30 rounded-2xl border border-slate-100 p-6 transition-all duration-300 hover:shadow-xl"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Icon */}
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white">
+      <div className="bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground mb-5 flex h-14 w-14 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110">
         <Icon size={28} strokeWidth={2} />
       </div>
 
       {/* Title */}
-      <h3 className="mb-3 text-xl font-bold text-slate-800 transition-colors group-hover:text-emerald-600">
+      <h3 className="group-hover:text-primary mb-3 text-xl font-bold text-slate-800 transition-colors">
         {feature.title}
       </h3>
 

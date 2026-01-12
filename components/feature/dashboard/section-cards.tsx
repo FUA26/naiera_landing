@@ -25,7 +25,7 @@ export function SectionCards() {
           <CardAction>
             <Badge
               variant="outline"
-              className="border-emerald-200/50 bg-emerald-50/50 text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400"
+              className="border-primary/30/50 bg-primary-lighter/50 text-primary-hover dark:border-primary/20 dark:bg-primary/10 dark:text-primary"
             >
               <IconTrendingUp className="size-3.5" />
               +12.5%
@@ -83,7 +83,7 @@ export function SectionCards() {
           <CardAction>
             <Badge
               variant="outline"
-              className="border-emerald-200/50 bg-emerald-50/50 text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400"
+              className="border-primary/30/50 bg-primary-lighter/50 text-primary-hover dark:border-primary/20 dark:bg-primary/10 dark:text-primary"
             >
               <IconTrendingUp className="size-3.5" />
               +12.5%
@@ -110,7 +110,7 @@ export function SectionCards() {
           <CardAction>
             <Badge
               variant="outline"
-              className="border-emerald-200/50 bg-emerald-50/50 text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400"
+              className="border-primary/30/50 bg-primary-lighter/50 text-primary-hover dark:border-primary/20 dark:bg-primary/10 dark:text-primary"
             >
               <IconTrendingUp className="size-3.5" />
               +4.5%

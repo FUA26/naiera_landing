@@ -75,12 +75,12 @@ export default function ProfilePage() {
               <div className="grid gap-6 md:grid-cols-1">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-emerald-700">
+                    <CardTitle className="text-primary-hover">
                       {t("vision")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <blockquote className="border-l-4 border-emerald-500 pl-4 text-xl font-medium text-slate-800 italic">
+                    <blockquote className="border-l-4 border-primary pl-4 text-xl font-medium text-slate-800 italic">
                       "Terwujudnya Kabupaten Naiera yang Maju, Sejahtera, dan
                       Berbudaya berbasis Teknologi Digital pada tahun 2030"
                     </blockquote>
@@ -89,7 +89,7 @@ export default function ProfilePage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-emerald-700">
+                    <CardTitle className="text-primary-hover">
                       {t("mission")}
                     </CardTitle>
                   </CardHeader>
@@ -132,25 +132,25 @@ export default function ProfilePage() {
                     </div>
                   </div>
                   <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                    <div className="rounded-lg bg-emerald-50 p-4 text-center">
+                    <div className="rounded-lg bg-primary-lighter p-4 text-center">
                       <p className="text-sm text-slate-500">Luas Wilayah</p>
-                      <p className="text-xl font-bold text-emerald-700">
+                      <p className="text-xl font-bold text-primary-hover">
                         1,234 km²
                       </p>
                     </div>
-                    <div className="rounded-lg bg-emerald-50 p-4 text-center">
+                    <div className="rounded-lg bg-primary-lighter p-4 text-center">
                       <p className="text-sm text-slate-500">Jumlah Penduduk</p>
-                      <p className="text-xl font-bold text-emerald-700">
+                      <p className="text-xl font-bold text-primary-hover">
                         540,321 Jiwa
                       </p>
                     </div>
-                    <div className="rounded-lg bg-emerald-50 p-4 text-center">
+                    <div className="rounded-lg bg-primary-lighter p-4 text-center">
                       <p className="text-sm text-slate-500">Kecamatan</p>
-                      <p className="text-xl font-bold text-emerald-700">15</p>
+                      <p className="text-xl font-bold text-primary-hover">15</p>
                     </div>
-                    <div className="rounded-lg bg-emerald-50 p-4 text-center">
+                    <div className="rounded-lg bg-primary-lighter p-4 text-center">
                       <p className="text-sm text-slate-500">Desa/Kelurahan</p>
-                      <p className="text-xl font-bold text-emerald-700">145</p>
+                      <p className="text-xl font-bold text-primary-hover">145</p>
                     </div>
                   </div>
                 </CardContent>

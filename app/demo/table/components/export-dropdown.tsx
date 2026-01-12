@@ -393,7 +393,7 @@ export function ExportDropdown({ data }: ExportDropdownProps) {
           disabled={!!isExporting}
           className="cursor-pointer"
         >
-          <IconFileTypeXls className="mr-2 h-4 w-4 text-emerald-600" />
+          <IconFileTypeXls className="mr-2 h-4 w-4 text-primary" />
           <span className="flex-1">Excel (.xls)</span>
           {isExporting === "excel" && (
             <IconLoader2 className="h-4 w-4 animate-spin" />

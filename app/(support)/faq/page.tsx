@@ -39,7 +39,7 @@ export default function FaqPage() {
       <Header />
       <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-emerald-600 to-emerald-700 py-16 text-white">
+        <section className="bg-gradient-to-br from-primary to-emerald-700 py-16 text-white">
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
               <HelpCircle className="h-8 w-8" />
@@ -78,7 +78,7 @@ export default function FaqPage() {
                 <TabsTrigger
                   key={cat}
                   value={cat}
-                  className="rounded-full border border-slate-200 bg-white px-6 py-2 data-[state=active]:border-emerald-500 data-[state=active]:bg-emerald-500 data-[state=active]:text-white"
+                  className="rounded-full border border-slate-200 bg-white px-6 py-2 data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-white"
                 >
                   {t(`categories.${cat}`)}
                 </TabsTrigger>
@@ -113,13 +113,13 @@ export default function FaqPage() {
           </div>
 
           {/* Contact CTA */}
-          <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-emerald-50 p-8 text-center">
+          <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-primary-lighter p-8 text-center">
             <p className="mb-4 text-lg font-medium text-slate-800">
               {t("contactCta")}
             </p>
             <Link
               href="/kontak"
-              className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 font-medium text-white transition-colors hover:bg-emerald-700"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-hover"
             >
               {t("contactLink")}
               <ChevronRight className="h-4 w-4" />
