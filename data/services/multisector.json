@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "layanan-terpadu",
+    "icon": "FileCheck",
+    "name": "Layanan Terpadu",
+    "description": "Layanan publik terintegrasi satu pintu",
+    "categoryId": "multisector",
+    "stats": "2.1k"
+  },
+  {
+    "slug": "pengaduan-masyarakat",
+    "icon": "MessageCircle",
+    "name": "Pengaduan Masyarakat",
+    "description": "Saluran pengaduan dan aspirasi warga",
+    "categoryId": "multisector",
+    "badge": "Populer",
+    "stats": "3.4k"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "e-ktp",
+    "icon": "IdCard",
+    "name": "E-KTP",
+    "description": "Pembuatan dan perpanjangan KTP Elektronik",
+    "categoryId": "population",
+    "badge": "Populer",
+    "stats": "5.2k"
+  },
+  {
+    "slug": "kk",
+    "icon": "FileText",
+    "name": "Kartu Keluarga",
+    "description": "Pembuatan dan perubahan Kartu Keluarga",
+    "categoryId": "population",
+    "stats": "3.8k"
+  },
+  {
+    "slug": "akta-kelahiran",
+    "icon": "FileCheck",
+    "name": "Akta Kelahiran",
+    "description": "Pembuatan Akta Kelahiran",
+    "categoryId": "population",
+    "stats": "2.1k"
+  },
+  {
+    "slug": "pindah-domisili",
+    "icon": "Home",
+    "name": "Pindah Domisili",
+    "description": "Pengurusan surat pindah domisili",
+    "categoryId": "population",
+    "stats": "890"
+  }
+]

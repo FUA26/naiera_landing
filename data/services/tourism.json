@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "info-wisata",
+    "icon": "MapPin",
+    "name": "Informasi Wisata",
+    "description": "Panduan destinasi wisata lokal",
+    "categoryId": "tourism",
+    "stats": "15k"
+  },
+  {
+    "slug": "izin-event",
+    "icon": "Award",
+    "name": "Izin Event",
+    "description": "Perizinan event dan kegiatan publik",
+    "categoryId": "tourism",
+    "stats": "120"
+  }
+]

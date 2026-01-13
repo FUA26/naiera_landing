@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "bpjs-kesehatan",
+    "icon": "Heart",
+    "name": "BPJS Kesehatan",
+    "description": "Pendaftaran dan informasi BPJS",
+    "categoryId": "health",
+    "badge": "Populer",
+    "stats": "8.5k"
+  },
+  {
+    "slug": "puskesmas",
+    "icon": "Building2",
+    "name": "Layanan Puskesmas",
+    "description": "Informasi layanan kesehatan Puskesmas",
+    "categoryId": "health",
+    "stats": "4.2k"
+  },
+  {
+    "slug": "posyandu",
+    "icon": "Users",
+    "name": "Posyandu",
+    "description": "Layanan kesehatan ibu dan anak",
+    "categoryId": "health",
+    "stats": "2.3k"
+  }
+]

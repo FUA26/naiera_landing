@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "bank-sampah",
+    "icon": "Sprout",
+    "name": "Bank Sampah",
+    "description": "Program pengelolaan sampah",
+    "categoryId": "environment",
+    "stats": "890"
+  },
+  {
+    "slug": "aduan-lingkungan",
+    "icon": "MessageCircle",
+    "name": "Aduan Lingkungan",
+    "description": "Laporan masalah lingkungan",
+    "categoryId": "environment",
+    "stats": "450"
+  }
+]

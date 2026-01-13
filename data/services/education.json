@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "ppdb",
+    "icon": "GraduationCap",
+    "name": "PPDB Online",
+    "description": "Penerimaan Peserta Didik Baru",
+    "categoryId": "education",
+    "badge": "Baru",
+    "stats": "3.7k"
+  },
+  {
+    "slug": "beasiswa",
+    "icon": "Award",
+    "name": "Beasiswa",
+    "description": "Informasi dan pendaftaran beasiswa",
+    "categoryId": "education",
+    "stats": "1.5k"
+  },
+  {
+    "slug": "surat-keterangan-sekolah",
+    "icon": "FileText",
+    "name": "Surat Keterangan Sekolah",
+    "description": "Pengurusan surat keterangan",
+    "categoryId": "education",
+    "stats": "2.8k"
+  }
+]

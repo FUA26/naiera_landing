@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "izin-usaha",
+    "icon": "FileCheck",
+    "name": "Izin Usaha (NIB)",
+    "description": "Pengurusan Nomor Induk Berusaha",
+    "categoryId": "economy",
+    "stats": "1.9k"
+  },
+  {
+    "slug": "pajak-daerah",
+    "icon": "CreditCard",
+    "name": "Pajak Daerah",
+    "description": "Pembayaran dan informasi pajak",
+    "categoryId": "economy",
+    "badge": "Baru",
+    "stats": "4.5k"
+  },
+  {
+    "slug": "modal-umkm",
+    "icon": "Factory",
+    "name": "Bantuan Modal UMKM",
+    "description": "Program bantuan modal UMKM",
+    "categoryId": "economy",
+    "stats": "680"
+  }
+]

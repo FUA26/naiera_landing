@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "ppid",
+    "icon": "FileSearch",
+    "name": "Informasi Publik",
+    "description": "Permohonan informasi publik (PPID)",
+    "categoryId": "ppid",
+    "stats": "320"
+  },
+  {
+    "slug": "dokumen-publik",
+    "icon": "FileText",
+    "name": "Dokumen Publik",
+    "description": "Akses dokumen dan regulasi",
+    "categoryId": "ppid",
+    "stats": "1.5k"
+  }
+]

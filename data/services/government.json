@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "surat-rt-rw",
+    "icon": "FileText",
+    "name": "Surat RT/RW",
+    "description": "Pengurusan surat keterangan RT/RW",
+    "categoryId": "government",
+    "stats": "4.2k"
+  },
+  {
+    "slug": "dana-desa",
+    "icon": "Building",
+    "name": "Dana Desa",
+    "description": "Transparansi penggunaan dana desa",
+    "categoryId": "government",
+    "stats": "120"
+  }
+]

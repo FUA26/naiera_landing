@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "imb",
+    "icon": "Building",
+    "name": "IMB (PBG)",
+    "description": "Izin Mendirikan Bangunan",
+    "categoryId": "infrastructure",
+    "stats": "780"
+  },
+  {
+    "slug": "aduan-infrastruktur",
+    "icon": "MessageCircle",
+    "name": "Aduan Infrastruktur",
+    "description": "Laporan kerusakan fasilitas umum",
+    "categoryId": "infrastructure",
+    "badge": "Populer",
+    "stats": "1.2k"
+  },
+  {
+    "slug": "transportasi-umum",
+    "icon": "Bus",
+    "name": "Transportasi Umum",
+    "description": "Info rute dan jadwal transportasi",
+    "categoryId": "infrastructure",
+    "stats": "5.6k"
+  }
+]

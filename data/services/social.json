@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "bansos",
+    "icon": "Users",
+    "name": "Bantuan Sosial",
+    "description": "Program bantuan sosial masyarakat",
+    "categoryId": "social",
+    "stats": "3.5k"
+  },
+  {
+    "slug": "dtks",
+    "icon": "Home",
+    "name": "DTKS",
+    "description": "Data Terpadu Kesejahteraan Sosial",
+    "categoryId": "social",
+    "stats": "2.8k"
+  }
+]

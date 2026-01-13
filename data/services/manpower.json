@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "kartu-kuning",
+    "icon": "FileSearch",
+    "name": "Kartu Kuning",
+    "description": "Kartu pencari kerja (AK/I)",
+    "categoryId": "manpower",
+    "stats": "2.4k"
+  },
+  {
+    "slug": "job-fair",
+    "icon": "Building",
+    "name": "Job Fair",
+    "description": "Informasi bursa kerja",
+    "categoryId": "manpower",
+    "badge": "Populer",
+    "stats": "1.8k"
+  },
+  {
+    "slug": "pelatihan-kerja",
+    "icon": "Award",
+    "name": "Pelatihan Kerja",
+    "description": "Program pelatihan dan sertifikasi",
+    "categoryId": "manpower",
+    "stats": "950"
+  }
+]
