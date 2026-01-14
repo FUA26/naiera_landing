@@ -25,9 +25,6 @@ import {
   Mountain,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 interface Destination {
   id: string;
@@ -197,9 +194,7 @@ export default function DestinasiWisataPage() {
   });
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
+    <>
       <main className="bg-slate-50">
         {/* Hero Section */}
         <section className="from-primary to-primary-hover bg-gradient-to-br py-12 text-white">
@@ -518,7 +513,6 @@ export default function DestinasiWisataPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }

@@ -23,6 +23,26 @@ export interface Service {
   stats?: string;
   showInMenu?: boolean;
   order?: number;
+  isIntegrated?: boolean;
+  detailedDescription?: string;
+  requirements?: string[];
+  process?: string[];
+  duration?: string;
+  cost?: string;
+  contactInfo?: {
+    office: string;
+    phone: string;
+    email: string;
+  };
+  downloadForms?: Array<{
+    name: string;
+    url: string;
+  }>;
+  relatedServices?: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 export interface ServiceWithCategory extends Service {
@@ -175,5 +195,31 @@ export async function getCategoryBySlug(slug: string): Promise<ServiceCategory |
   } catch (error) {
     console.error(`Error loading category ${slug}:`, error);
     return null;
+  }
+}
+
+/**
+ * Get integrated services (isIntegrated: true)
+ */
+export async function getIntegratedServices(): Promise<ServiceWithCategory[]> {
+  try {
+    const allServices = await getAllServices();
+    return allServices.filter(service => service.isIntegrated === true);
+  } catch (error) {
+    console.error('Error loading integrated services:', error);
+    return [];
+  }
+}
+
+/**
+ * Get non-integrated services (isIntegrated: false)
+ */
+export async function getNonIntegratedServices(): Promise<ServiceWithCategory[]> {
+  try {
+    const allServices = await getAllServices();
+    return allServices.filter(service => service.isIntegrated === false);
+  } catch (error) {
+    console.error('Error loading non-integrated services:', error);
+    return [];
   }
 }

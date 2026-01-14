@@ -8,7 +8,8 @@
     "badge": "Penting",
     "stats": "24/7",
     "showInMenu": false,
-    "order": 1
+    "order": 1,
+    "isIntegrated": false
   },
   {
     "slug": "info-bencana",
@@ -18,6 +19,7 @@
     "categoryId": "disaster",
     "stats": "Real-time",
     "showInMenu": false,
-    "order": 2
+    "order": 2,
+    "isIntegrated": true
   }
 ]

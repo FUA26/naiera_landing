@@ -1,6 +1,3 @@
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { LayananPageClient } from "./layanan-page-client";
 import { getServiceCategories, getAllServices } from "@/lib/services-data";
 

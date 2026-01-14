@@ -12,8 +12,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 export default function FaqPage() {
   const t = useTranslations("Faq");
@@ -36,7 +34,6 @@ export default function FaqPage() {
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-emerald-700 py-16 text-white">
@@ -127,7 +124,6 @@ export default function FaqPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

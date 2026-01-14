@@ -19,9 +19,6 @@ import {
   DollarSign,
   Calendar,
 } from "lucide-react";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 interface BudgetCategory {
   name: string;
@@ -164,9 +161,7 @@ export default function APBDPage() {
   const [selectedYear, setSelectedYear] = useState("2025");
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
+    <>
       <main className="bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-teal-700 py-12 text-white">
@@ -506,7 +501,6 @@ export default function APBDPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }

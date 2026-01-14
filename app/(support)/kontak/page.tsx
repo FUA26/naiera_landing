@@ -6,8 +6,6 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
@@ -45,7 +43,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-600 to-indigo-700 py-16 text-white">
@@ -175,7 +172,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -14,8 +14,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 type AgencyType = "dinas" | "badan" | "kantor" | "kecamatan";
 
@@ -101,7 +99,6 @@ export default function AgenciesPage() {
 
   return (
     <>
-      <Header />
       <main className="bg-muted min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-800 to-blue-900 py-16 text-white">
@@ -218,7 +215,6 @@ export default function AgenciesPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

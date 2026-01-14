@@ -12,15 +12,12 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 export default function DprdPage() {
   const t = useTranslations("Government.dpr");
 
   return (
     <>
-      <Header />
       <main className="bg-muted min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-800 to-red-900 py-16 text-white">
@@ -184,7 +181,6 @@ export default function DprdPage() {
           </Tabs>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

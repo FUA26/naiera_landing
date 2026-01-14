@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -195,8 +192,6 @@ export default function PublikasiPage() {
 
   return (
     <>
-      <TopBar />
-      <Header />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50/30">
         {/* Hero */}
         <section className="relative bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 py-20 text-white">
@@ -505,7 +500,6 @@ export default function PublikasiPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

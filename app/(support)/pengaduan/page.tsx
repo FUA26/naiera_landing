@@ -15,8 +15,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 export default function ComplaintPage() {
   const t = useTranslations("Complaint");
@@ -47,7 +45,6 @@ export default function ComplaintPage() {
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-500 to-orange-600 py-16 text-white">
@@ -214,7 +211,6 @@ export default function ComplaintPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

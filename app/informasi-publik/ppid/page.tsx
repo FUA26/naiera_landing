@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -19,18 +16,15 @@ import {
   FileText,
   Users,
   Download,
-  Eye,
   Shield,
   Building2,
   Phone,
   Mail,
   MapPin,
   ExternalLink,
-  AlertCircle,
   Info,
   HelpCircle,
   FileCheck,
-  Calendar,
   Search,
 } from "lucide-react";
 
@@ -146,11 +140,8 @@ export default function PPIDPage() {
   };
 
   return (
-    <>
-      <TopBar />
-      <Header />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
-        {/* Hero */}
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+      {/* Hero */}
         <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 py-20 text-white">
           <div
             className="absolute inset-0 opacity-10"
@@ -514,7 +505,5 @@ export default function PPIDPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 }

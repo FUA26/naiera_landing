@@ -6,8 +6,6 @@ import { Map, User, Home, ChevronRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { Separator } from "@/components/ui/separator";
 
 // Mock Data
@@ -80,7 +78,6 @@ export default function DistrictsPage() {
 
   return (
     <>
-      <Header />
       <main className="bg-muted min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-teal-700 to-teal-800 py-16 text-white">
@@ -215,7 +212,6 @@ export default function DistrictsPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

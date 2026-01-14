@@ -4,15 +4,12 @@ import { useTranslations } from "next-intl";
 import { Landmark, History, Target, Map } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 export default function ProfilePage() {
   const t = useTranslations("Government.profile");
 
   return (
     <>
-      <Header />
       <main className="bg-muted min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-emerald-800 to-emerald-900 py-16 text-white">
@@ -167,7 +164,6 @@ export default function ProfilePage() {
           </Tabs>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

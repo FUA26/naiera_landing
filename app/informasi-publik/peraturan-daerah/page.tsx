@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -210,8 +207,6 @@ export default function RegulasiPage() {
 
   return (
     <>
-      <TopBar />
-      <Header />
       <main className="to-primary-lighter/30 min-h-screen bg-gradient-to-br from-slate-50 via-white">
         <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 py-20 text-white">
           <div className="container mx-auto px-4">
@@ -406,7 +401,6 @@ export default function RegulasiPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -29,12 +29,12 @@ import {
   Building,
   Cloud,
   Search,
+  Link as LinkIcon,
+  ExternalLink,
   type LucideIcon,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
+import { Badge } from "@/components/ui/badge";
 import type { ServiceCategory, ServiceWithCategory } from "@/lib/services-data";
 
 // Icon mapping
@@ -82,6 +82,7 @@ interface LayananPageClientProps {
     categoryId: string;
     badge?: string;
     stats?: string;
+    isIntegrated?: boolean;
     category: {
       id: string;
       name: string;
@@ -99,6 +100,7 @@ export function LayananPageClient({
 }: LayananPageClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [integrationFilter, setIntegrationFilter] = useState<'all' | 'integrated' | 'non-integrated'>('all');
 
   // Transform categories with icon components
   const categories = rawCategories.map((cat) => ({
@@ -123,13 +125,15 @@ export function LayananPageClient({
     const matchesCategory =
       selectedCategory === null ||
       service.category.slug === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesIntegration =
+      integrationFilter === 'all' ||
+      (integrationFilter === 'integrated' && service.isIntegrated === true) ||
+      (integrationFilter === 'non-integrated' && service.isIntegrated === false);
+    return matchesSearch && matchesCategory && matchesIntegration;
   });
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
+    <>
       <main className="bg-muted">
         {/* Hero Section */}
         <section className="from-primary to-primary-hover bg-gradient-to-br py-16 text-white">
@@ -200,6 +204,49 @@ export function LayananPageClient({
           </div>
         </section>
 
+        {/* Integration Filter */}
+        <section className="border-border bg-muted border-b py-4">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-muted-foreground text-sm font-medium">
+                Status Integrasi:
+              </span>
+              <button
+                onClick={() => setIntegrationFilter('all')}
+                className={`rounded-full px-4 py-1.5 text-xs font-medium transition-all ${
+                  integrationFilter === 'all'
+                    ? "bg-primary text-white shadow-md"
+                    : "bg-white text-slate-600 hover:bg-slate-100"
+                }`}
+              >
+                Semua
+              </button>
+              <button
+                onClick={() => setIntegrationFilter('integrated')}
+                className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-medium transition-all ${
+                  integrationFilter === 'integrated'
+                    ? "bg-green-600 text-white shadow-md"
+                    : "bg-white text-slate-600 hover:bg-slate-100"
+                }`}
+              >
+                <LinkIcon size={12} />
+                Terintegrasi
+              </button>
+              <button
+                onClick={() => setIntegrationFilter('non-integrated')}
+                className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-medium transition-all ${
+                  integrationFilter === 'non-integrated'
+                    ? "bg-slate-600 text-white shadow-md"
+                    : "bg-white text-slate-600 hover:bg-slate-100"
+                }`}
+              >
+                <ExternalLink size={12} />
+                Eksternal
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid */}
         <section className="py-12">
           <div className="container mx-auto max-w-6xl px-4">
@@ -223,9 +270,9 @@ export function LayananPageClient({
                       href={`/layanan/${service.slug}`}
                       className="group hover:border-primary/30 border-border bg-card relative overflow-hidden rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                     >
-                      {/* Badge */}
-                      {service.badge && (
-                        <div className="absolute top-4 right-4">
+                      {/* Badges */}
+                      <div className="absolute top-4 right-4 flex flex-col gap-1 items-end">
+                        {service.badge && (
                           <span
                             className={`rounded-full px-3 py-1 text-xs font-semibold ${
                               service.badge === "Baru"
@@ -237,8 +284,29 @@ export function LayananPageClient({
                           >
                             {service.badge}
                           </span>
-                        </div>
-                      )}
+                        )}
+                        {service.isIntegrated !== undefined && (
+                          <Badge
+                            className={`text-xs font-medium ${
+                              service.isIntegrated
+                                ? "bg-green-100 text-green-700 hover:bg-green-200"
+                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                            }`}
+                          >
+                            {service.isIntegrated ? (
+                              <>
+                                <LinkIcon className="mr-1" size={10} />
+                                Terintegrasi
+                              </>
+                            ) : (
+                              <>
+                                <ExternalLink className="mr-1" size={10} />
+                                Eksternal
+                              </>
+                            )}
+                          </Badge>
+                        )}
+                      </div>
 
                       {/* Icon */}
                       <div className="bg-primary-lighter text-primary group-hover:bg-primary mb-4 flex h-14 w-14 items-center justify-center rounded-xl transition-all group-hover:text-white">
@@ -283,7 +351,6 @@ export function LayananPageClient({
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }

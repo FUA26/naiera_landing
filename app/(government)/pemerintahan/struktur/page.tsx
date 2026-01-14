@@ -3,8 +3,6 @@
 import { useTranslations } from "next-intl";
 import { User, Network } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function StructurePage() {
@@ -12,7 +10,6 @@ export default function StructurePage() {
 
   return (
     <>
-      <Header />
       <main className="bg-muted min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-800 to-indigo-900 py-16 text-white">
@@ -117,7 +114,6 @@ export default function StructurePage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

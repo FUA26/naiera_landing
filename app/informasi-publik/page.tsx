@@ -26,9 +26,6 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 interface InfoItem {
   slug: string;
@@ -373,9 +370,7 @@ export default function InformasiPublikPage() {
   });
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
+    <>
       <main className="bg-muted">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 to-indigo-700 py-16 text-white">
@@ -624,7 +619,6 @@ export default function InformasiPublikPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }

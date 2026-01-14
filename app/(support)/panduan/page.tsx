@@ -11,8 +11,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 const guideIcons: Record<string, React.ElementType> = {
   register: UserPlus,
@@ -28,7 +26,6 @@ export default function GuidePage() {
 
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-16 text-white">
@@ -106,7 +103,6 @@ export default function GuidePage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

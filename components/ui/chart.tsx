@@ -114,8 +114,17 @@ const ChartTooltipContent = React.forwardRef<
     }
 >(
   (
-    // @ts-ignore
-    {
+    props: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
+      React.ComponentProps<"div"> & {
+        hideLabel?: boolean;
+        hideIndicator?: boolean;
+        indicator?: "line" | "dot" | "dashed";
+        nameKey?: string;
+        labelKey?: string;
+      },
+    ref
+  ) => {
+    const {
       active,
       payload,
       className,
@@ -129,9 +138,7 @@ const ChartTooltipContent = React.forwardRef<
       color,
       nameKey,
       labelKey,
-    },
-    ref
-  ) => {
+    } = props as any;
     const { config } = useChart();
 
     const tooltipLabel = React.useMemo(() => {
@@ -186,7 +193,7 @@ const ChartTooltipContent = React.forwardRef<
       >
         {!nestLabel ? tooltipLabel : null}
         <div className="grid gap-1.5">
-          {payload.map((item, index) => {
+          {payload.map((item: any, index: number) => {
             const key = `${nameKey || item.name || item.dataKey || "value"}`;
             const itemConfig = config[key as keyof typeof config];
             const indicatorColor = color || item.payload.fill || item.color;
@@ -261,11 +268,12 @@ const ChartLegend = RechartsPrimitive.Legend;
 
 const ChartLegendContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div"> &
-    Pick<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
-      hideIcon?: boolean;
-      nameKey?: string;
-    }
+  React.ComponentProps<"div"> & {
+    hideIcon?: boolean;
+    nameKey?: string;
+    payload?: any;
+    verticalAlign?: "top" | "bottom";
+  }
 >(
   (
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
@@ -286,7 +294,7 @@ const ChartLegendContent = React.forwardRef<
           className
         )}
       >
-        {payload.map((item) => {
+        {payload.map((item: any) => {
           const key = `${nameKey || item.dataKey || "value"}`;
           const itemConfig = config[key as keyof typeof config];
 
