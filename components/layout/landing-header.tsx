@@ -6,10 +6,15 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
-import { MegaMenu } from "@/components/layout/mega-menu";
+import { MegaMenuClient } from "@/components/layout/mega-menu-client";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
+import type { ServiceCategory } from "@/lib/services-data";
 
-export function Header() {
+interface HeaderProps {
+  servicesByCategory?: Array<ServiceCategory & { services: any[] }>;
+}
+
+export function Header({ servicesByCategory = [] }: HeaderProps) {
   const t = useTranslations("Navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -51,7 +56,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <MegaMenu />
+            <MegaMenuClient servicesByCategory={servicesByCategory} />
           </div>
 
           {/* Action Section */}

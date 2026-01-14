@@ -1,15 +1,12 @@
 import { notFound } from "next/navigation";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 import { NewsDetailClient } from "./news-detail-client";
 import { getNewsBySlug, getAllNews } from "@/lib/news-data";
 import type { Metadata } from "next";
 
 interface NewsPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate static params for all news articles
@@ -22,7 +19,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: NewsPageProps): Promise<Metadata> {
-  const article = await getNewsBySlug(params.slug);
+  const { slug } = await params;
+  const article = await getNewsBySlug(slug);
 
   if (!article) {
     return {
@@ -45,7 +43,8 @@ export async function generateMetadata({ params }: NewsPageProps): Promise<Metad
 }
 
 export default async function NewsDetailPage({ params }: NewsPageProps) {
-  const article = await getNewsBySlug(params.slug);
+  const { slug } = await params;
+  const article = await getNewsBySlug(slug);
 
   if (!article) {
     notFound();
@@ -58,11 +57,6 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
-      <NewsDetailClient article={article} relatedNews={relatedNews} />
-      <Footer />
-    </div>
+    <NewsDetailClient article={article} relatedNews={relatedNews} />
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -31,9 +29,6 @@ import {
   Mail,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 interface InfoDetail {
   slug: string;
@@ -932,12 +927,13 @@ const infoData: InfoDetail[] = [
   },
 ];
 
-export default function InformasiPublikDetailPage({
+export default async function InformasiPublikDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const info = infoData.find((i) => i.slug === params.slug);
+  const { slug } = await params;
+  const info = infoData.find((i) => i.slug === slug);
 
   if (!info) {
     notFound();
@@ -946,10 +942,7 @@ export default function InformasiPublikDetailPage({
   const InfoIcon = info.icon;
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
-      <main className="bg-slate-50">
+    <main className="bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 to-indigo-700 py-16 text-white">
           <div className="container mx-auto max-w-5xl px-4">
@@ -1274,7 +1267,5 @@ export default function InformasiPublikDetailPage({
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
   );
 }

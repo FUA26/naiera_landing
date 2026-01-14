@@ -14,12 +14,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
-  Users,
-  Stethoscope,
-  GraduationCap,
-  Receipt,
-  Building2,
-  HeartHandshake,
   Newspaper,
   Calendar,
   FileText,
@@ -33,11 +27,27 @@ import {
   Contact,
   FileSearch,
   BookOpen,
+  Building2,
 } from "lucide-react";
+import { getServiceIcon } from "./service-icon-map";
+import type { ServiceCategory } from "@/lib/services-data";
 
-export function MegaMenu() {
+interface MegaMenuClientProps {
+  servicesByCategory: Array<ServiceCategory & { services: any[] }>;
+}
+
+export function MegaMenuClient({ servicesByCategory }: MegaMenuClientProps) {
   const t = useTranslations("Navigation.megaMenu");
   const tNav = useTranslations("Navigation");
+
+  // Flatten all services from all categories
+  const allServices = servicesByCategory.flatMap(cat =>
+    cat.services.map(service => ({
+      ...service,
+      categoryName: cat.name,
+      categorySlug: cat.slug
+    }))
+  );
 
   return (
     <NavigationMenu>
@@ -77,48 +87,21 @@ export function MegaMenu() {
                   </Link>
                 </NavigationMenuLink>
               </li>
-              <ListItem
-                href="/layanan/e-ktp"
-                title={t("services.items.population.title")}
-                icon={Users}
-              >
-                {t("services.items.population.desc")}
-              </ListItem>
-              <ListItem
-                href="/layanan/bpjs-kesehatan"
-                title={t("services.items.health.title")}
-                icon={Stethoscope}
-              >
-                {t("services.items.health.desc")}
-              </ListItem>
-              <ListItem
-                href="/layanan/ppdb"
-                title={t("services.items.education.title")}
-                icon={GraduationCap}
-              >
-                {t("services.items.education.desc")}
-              </ListItem>
-              <ListItem
-                href="/layanan/pajak-daerah"
-                title={t("services.items.tax.title")}
-                icon={Receipt}
-              >
-                {t("services.items.tax.desc")}
-              </ListItem>
-              <ListItem
-                href="/layanan/izin-usaha"
-                title={t("services.items.business.title")}
-                icon={Building2}
-              >
-                {t("services.items.business.desc")}
-              </ListItem>
-              <ListItem
-                href="/layanan/bansos"
-                title={t("services.items.social.title")}
-                icon={HeartHandshake}
-              >
-                {t("services.items.social.desc")}
-              </ListItem>
+
+              {/* Dynamic Services from JSON */}
+              {allServices.slice(0, 6).map((service) => {
+                const IconComponent = getServiceIcon(service.icon);
+                return (
+                  <ListItem
+                    key={service.slug}
+                    href={`/layanan/${service.slug}`}
+                    title={service.name}
+                    icon={IconComponent}
+                  >
+                    {service.description}
+                  </ListItem>
+                );
+              })}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

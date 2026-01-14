@@ -17,7 +17,7 @@
     "categoryId": "economy",
     "badge": "Baru",
     "stats": "4.5k",
-    "showInMenu": true,
+    "showInMenu": false,
     "order": 2
   },
   {

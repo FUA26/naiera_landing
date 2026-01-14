@@ -1,5 +1,3 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import {
   CreditCard,
@@ -31,9 +29,6 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
-import { TopBar } from "@/components/layout/top-bar";
-import { Header } from "@/components/layout/landing-header";
-import { Footer } from "@/components/layout/landing-footer";
 
 interface ServiceDetail {
   slug: string;
@@ -840,12 +835,13 @@ const servicesData: ServiceDetail[] = [
   },
 ];
 
-export default function ServiceDetailPage({
+export default async function ServiceDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const service = servicesData.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const service = servicesData.find((s) => s.slug === slug);
 
   if (!service) {
     notFound();
@@ -854,10 +850,7 @@ export default function ServiceDetailPage({
   const ServiceIcon = service.icon;
 
   return (
-    <div className="min-h-screen">
-      <TopBar />
-      <Header />
-      <main className="bg-muted">
+    <main className="bg-muted">
         {/* Hero Section */}
         <section className="from-primary to-primary-hover bg-gradient-to-br py-16 text-white">
           <div className="container mx-auto max-w-5xl px-4">
@@ -1088,7 +1081,5 @@ export default function ServiceDetailPage({
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
   );
 }
