@@ -166,7 +166,7 @@ export function AccessibilityWidget() {
   if (!mounted) return null;
 
   return (
-    <div className="a11y-widget-root">
+    <div className="a11y-widget-root" suppressHydrationWarning>
       {/* Floating Trigger Button */}
       <button
         onClick={toggleOpen}

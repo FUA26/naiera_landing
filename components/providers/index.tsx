@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { ThemeProvider } from "./theme-provider";
+import { N8nChatWidget } from "@/components/shared/n8n-chat";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -12,6 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
     >
       {children}
+      <N8nChatWidget />
     </ThemeProvider>
   );
 }
